@@ -1,4 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-TaxAppeal-TaxAppealUITests/Pods-TaxAppeal-TaxAppealUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/CBFlashyTabBarController/CBFlashyTabBarController.framework
-${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework
-${BUILT_PRODUCTS_DIR}/pop/pop.framework
+${BUILT_PRODUCTS_DIR}/Shuffle-iOS/Shuffle_iOS.framework

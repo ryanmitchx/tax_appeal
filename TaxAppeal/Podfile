@@ -7,7 +7,7 @@ target 'TaxAppeal' do
 
   # Pods for TaxAppeal
   pod 'CBFlashyTabBarController'
-  pod 'Koloda'
+  pod 'Shuffle-iOS'
   target 'TaxAppealTests' do
     inherit! :search_paths
     # Pods for testing

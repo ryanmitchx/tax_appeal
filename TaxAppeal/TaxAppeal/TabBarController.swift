@@ -8,7 +8,6 @@
 
 import UIKit
 import CBFlashyTabBarController
-import Koloda
 
 class TabBarController: UITabBarController {
     
@@ -27,7 +26,7 @@ class TabBarController: UITabBarController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let neighborhood = ViewController()
+        let neighborhood = HouseViewController()
         neighborhood.tabBarItem = UITabBarItem()
         neighborhood.tabBarItem.title = "Neighborhood"
         neighborhood.tabBarItem.image = UIImage(named: "houses") as UIImage?

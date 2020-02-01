@@ -12,6 +12,12 @@
 		946FFC3623E54A4C002ACF86 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FFC3523E54A4C002ACF86 /* TabBarController.swift */; };
 		946FFC3823E551DB002ACF86 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FFC3723E551DB002ACF86 /* ViewController1.swift */; };
 		946FFC3A23E56B5D002ACF86 /* HouseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FFC3923E56B5D002ACF86 /* HouseView.swift */; };
+		946FFC4723E57357002ACF86 /* SampleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FFC4223E57357002ACF86 /* SampleCard.swift */; };
+		946FFC4823E57357002ACF86 /* SampleCardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FFC4323E57357002ACF86 /* SampleCardContentView.swift */; };
+		946FFC4923E57357002ACF86 /* SampleCardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FFC4423E57357002ACF86 /* SampleCardOverlay.swift */; };
+		946FFC4A23E57357002ACF86 /* SampleCardFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FFC4523E57357002ACF86 /* SampleCardFooterView.swift */; };
+		946FFC4B23E57357002ACF86 /* SampleCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FFC4623E57357002ACF86 /* SampleCardModel.swift */; };
+		946FFC4E23E5739B002ACF86 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FFC4D23E5739B002ACF86 /* UIView+Extensions.swift */; };
 		94A19E6423E548D7003E3B4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A19E6323E548D7003E3B4C /* AppDelegate.swift */; };
 		94A19E6823E548D7003E3B4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A19E6723E548D7003E3B4C /* ViewController.swift */; };
 		94A19E6B23E548D7003E3B4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A19E6923E548D7003E3B4C /* Main.storyboard */; };
@@ -48,6 +54,12 @@
 		946FFC3523E54A4C002ACF86 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		946FFC3723E551DB002ACF86 /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		946FFC3923E56B5D002ACF86 /* HouseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseView.swift; sourceTree = "<group>"; };
+		946FFC4223E57357002ACF86 /* SampleCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCard.swift; sourceTree = "<group>"; };
+		946FFC4323E57357002ACF86 /* SampleCardContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCardContentView.swift; sourceTree = "<group>"; };
+		946FFC4423E57357002ACF86 /* SampleCardOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCardOverlay.swift; sourceTree = "<group>"; };
+		946FFC4523E57357002ACF86 /* SampleCardFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCardFooterView.swift; sourceTree = "<group>"; };
+		946FFC4623E57357002ACF86 /* SampleCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCardModel.swift; sourceTree = "<group>"; };
+		946FFC4D23E5739B002ACF86 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		94A19E6023E548D7003E3B4C /* TaxAppeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxAppeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A19E6323E548D7003E3B4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94A19E6723E548D7003E3B4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +107,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		946FFC4123E57357002ACF86 /* SampleCard */ = {
+			isa = PBXGroup;
+			children = (
+				946FFC4223E57357002ACF86 /* SampleCard.swift */,
+				946FFC4323E57357002ACF86 /* SampleCardContentView.swift */,
+				946FFC4423E57357002ACF86 /* SampleCardOverlay.swift */,
+				946FFC4523E57357002ACF86 /* SampleCardFooterView.swift */,
+				946FFC4623E57357002ACF86 /* SampleCardModel.swift */,
+			);
+			path = SampleCard;
+			sourceTree = "<group>";
+		};
+		946FFC4C23E5739B002ACF86 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				946FFC4D23E5739B002ACF86 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		94A19E5723E548D7003E3B4C = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +152,8 @@
 		94A19E6223E548D7003E3B4C /* TaxAppeal */ = {
 			isa = PBXGroup;
 			children = (
+				946FFC4C23E5739B002ACF86 /* Extensions */,
+				946FFC4123E57357002ACF86 /* SampleCard */,
 				94A19E6323E548D7003E3B4C /* AppDelegate.swift */,
 				94A19E6723E548D7003E3B4C /* ViewController.swift */,
 				946FFC3723E551DB002ACF86 /* ViewController1.swift */,
@@ -413,11 +447,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				946FFC4923E57357002ACF86 /* SampleCardOverlay.swift in Sources */,
+				946FFC4B23E57357002ACF86 /* SampleCardModel.swift in Sources */,
 				946FFC3A23E56B5D002ACF86 /* HouseView.swift in Sources */,
 				94A19E6823E548D7003E3B4C /* ViewController.swift in Sources */,
 				946FFC3823E551DB002ACF86 /* ViewController1.swift in Sources */,
+				946FFC4723E57357002ACF86 /* SampleCard.swift in Sources */,
 				946FFC3623E54A4C002ACF86 /* TabBarController.swift in Sources */,
 				94A19E6423E548D7003E3B4C /* AppDelegate.swift in Sources */,
+				946FFC4823E57357002ACF86 /* SampleCardContentView.swift in Sources */,
+				946FFC4A23E57357002ACF86 /* SampleCardFooterView.swift in Sources */,
+				946FFC4E23E5739B002ACF86 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
