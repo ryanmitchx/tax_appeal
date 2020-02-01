@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2548EC0C23E61CCE00D4A743 /* PropertyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2548EC0B23E61CCE00D4A743 /* PropertyRequest.swift */; };
+		2548EC0E23E61CE400D4A743 /* PropertyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2548EC0D23E61CE400D4A743 /* PropertyResponse.swift */; };
+		2548EC1023E61F5300D4A743 /* HouseDetailAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2548EC0F23E61F5300D4A743 /* HouseDetailAPIController.swift */; };
 		62E1C087F57B047B1711ACF0 /* Pods_TaxAppeal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD6E629A52F22AA37B2CA12 /* Pods_TaxAppeal.framework */; };
 		89D1DA1F75E0AD15BE13E247 /* Pods_TaxAppealTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38ED8ADA8B251E3E4A9E5B63 /* Pods_TaxAppealTests.framework */; };
 		946FFC3623E54A4C002ACF86 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FFC3523E54A4C002ACF86 /* TabBarController.swift */; };
@@ -48,6 +51,9 @@
 
 /* Begin PBXFileReference section */
 		1D8B82DEA8525CF1BB413FBC /* Pods_TaxAppeal_TaxAppealUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaxAppeal_TaxAppealUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2548EC0B23E61CCE00D4A743 /* PropertyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyRequest.swift; sourceTree = "<group>"; };
+		2548EC0D23E61CE400D4A743 /* PropertyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyResponse.swift; sourceTree = "<group>"; };
+		2548EC0F23E61F5300D4A743 /* HouseDetailAPIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailAPIController.swift; sourceTree = "<group>"; };
 		3887A1349829A189AA61E989 /* Pods-TaxAppealTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxAppealTests.debug.xcconfig"; path = "Target Support Files/Pods-TaxAppealTests/Pods-TaxAppealTests.debug.xcconfig"; sourceTree = "<group>"; };
 		38ED8ADA8B251E3E4A9E5B63 /* Pods_TaxAppealTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaxAppealTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5008A8AA99C8D8C377D19E83 /* Pods-TaxAppeal-TaxAppealUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxAppeal-TaxAppealUITests.debug.xcconfig"; path = "Target Support Files/Pods-TaxAppeal-TaxAppealUITests/Pods-TaxAppeal-TaxAppealUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +172,9 @@
 				94A19E6C23E548D9003E3B4C /* Assets.xcassets */,
 				94A19E6E23E548D9003E3B4C /* LaunchScreen.storyboard */,
 				94A19E7123E548D9003E3B4C /* Info.plist */,
+				2548EC0B23E61CCE00D4A743 /* PropertyRequest.swift */,
+				2548EC0D23E61CE400D4A743 /* PropertyResponse.swift */,
+				2548EC0F23E61F5300D4A743 /* HouseDetailAPIController.swift */,
 			);
 			path = TaxAppeal;
 			sourceTree = "<group>";
@@ -456,11 +465,14 @@
 				94A19E6823E548D7003E3B4C /* ViewController.swift in Sources */,
 				946FFC3823E551DB002ACF86 /* ViewController1.swift in Sources */,
 				946FFC4723E57357002ACF86 /* SampleCard.swift in Sources */,
+				2548EC0C23E61CCE00D4A743 /* PropertyRequest.swift in Sources */,
+				2548EC0E23E61CE400D4A743 /* PropertyResponse.swift in Sources */,
 				946FFC3623E54A4C002ACF86 /* TabBarController.swift in Sources */,
 				946FFC5023E61ED0002ACF86 /* MyHomeViewController.swift in Sources */,
 				94A19E6423E548D7003E3B4C /* AppDelegate.swift in Sources */,
 				946FFC4823E57357002ACF86 /* SampleCardContentView.swift in Sources */,
 				946FFC4A23E57357002ACF86 /* SampleCardFooterView.swift in Sources */,
+				2548EC1023E61F5300D4A743 /* HouseDetailAPIController.swift in Sources */,
 				946FFC4E23E5739B002ACF86 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
