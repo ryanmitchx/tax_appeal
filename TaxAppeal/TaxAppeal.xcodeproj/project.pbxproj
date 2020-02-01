@@ -3,18 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62E1C087F57B047B1711ACF0 /* Pods_TaxAppeal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD6E629A52F22AA37B2CA12 /* Pods_TaxAppeal.framework */; };
+		89D1DA1F75E0AD15BE13E247 /* Pods_TaxAppealTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38ED8ADA8B251E3E4A9E5B63 /* Pods_TaxAppealTests.framework */; };
+		946FFC3623E54A4C002ACF86 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FFC3523E54A4C002ACF86 /* TabBarController.swift */; };
+		946FFC3823E551DB002ACF86 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FFC3723E551DB002ACF86 /* ViewController1.swift */; };
 		94A19E6423E548D7003E3B4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A19E6323E548D7003E3B4C /* AppDelegate.swift */; };
-		94A19E6623E548D7003E3B4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A19E6523E548D7003E3B4C /* SceneDelegate.swift */; };
 		94A19E6823E548D7003E3B4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A19E6723E548D7003E3B4C /* ViewController.swift */; };
 		94A19E6B23E548D7003E3B4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A19E6923E548D7003E3B4C /* Main.storyboard */; };
 		94A19E6D23E548D9003E3B4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A19E6C23E548D9003E3B4C /* Assets.xcassets */; };
 		94A19E7023E548D9003E3B4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A19E6E23E548D9003E3B4C /* LaunchScreen.storyboard */; };
 		94A19E7B23E548D9003E3B4C /* TaxAppealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A19E7A23E548D9003E3B4C /* TaxAppealTests.swift */; };
 		94A19E8623E548D9003E3B4C /* TaxAppealUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A19E8523E548D9003E3B4C /* TaxAppealUITests.swift */; };
+		B7DC21E6D37F555D334344D5 /* Pods_TaxAppeal_TaxAppealUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8B82DEA8525CF1BB413FBC /* Pods_TaxAppeal_TaxAppealUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D8B82DEA8525CF1BB413FBC /* Pods_TaxAppeal_TaxAppealUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaxAppeal_TaxAppealUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3887A1349829A189AA61E989 /* Pods-TaxAppealTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxAppealTests.debug.xcconfig"; path = "Target Support Files/Pods-TaxAppealTests/Pods-TaxAppealTests.debug.xcconfig"; sourceTree = "<group>"; };
+		38ED8ADA8B251E3E4A9E5B63 /* Pods_TaxAppealTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaxAppealTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5008A8AA99C8D8C377D19E83 /* Pods-TaxAppeal-TaxAppealUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxAppeal-TaxAppealUITests.debug.xcconfig"; path = "Target Support Files/Pods-TaxAppeal-TaxAppealUITests/Pods-TaxAppeal-TaxAppealUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5F00C93211CE603D7EB9A933 /* Pods-TaxAppeal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxAppeal.release.xcconfig"; path = "Target Support Files/Pods-TaxAppeal/Pods-TaxAppeal.release.xcconfig"; sourceTree = "<group>"; };
+		946FFC3523E54A4C002ACF86 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		946FFC3723E551DB002ACF86 /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		94A19E6023E548D7003E3B4C /* TaxAppeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxAppeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A19E6323E548D7003E3B4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		94A19E6523E548D7003E3B4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		94A19E6723E548D7003E3B4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		94A19E6A23E548D7003E3B4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94A19E6C23E548D9003E3B4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +59,10 @@
 		94A19E8123E548D9003E3B4C /* TaxAppealUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaxAppealUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A19E8523E548D9003E3B4C /* TaxAppealUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxAppealUITests.swift; sourceTree = "<group>"; };
 		94A19E8723E548D9003E3B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C943AE6103EE51445810C80 /* Pods-TaxAppeal-TaxAppealUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxAppeal-TaxAppealUITests.release.xcconfig"; path = "Target Support Files/Pods-TaxAppeal-TaxAppealUITests/Pods-TaxAppeal-TaxAppealUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AB36CA69F43CE25CB0CEFBFF /* Pods-TaxAppeal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxAppeal.debug.xcconfig"; path = "Target Support Files/Pods-TaxAppeal/Pods-TaxAppeal.debug.xcconfig"; sourceTree = "<group>"; };
+		AE7D79C0ADF156BBAF94F205 /* Pods-TaxAppealTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxAppealTests.release.xcconfig"; path = "Target Support Files/Pods-TaxAppealTests/Pods-TaxAppealTests.release.xcconfig"; sourceTree = "<group>"; };
+		DFD6E629A52F22AA37B2CA12 /* Pods_TaxAppeal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaxAppeal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E1C087F57B047B1711ACF0 /* Pods_TaxAppeal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D1DA1F75E0AD15BE13E247 /* Pods_TaxAppealTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7DC21E6D37F555D334344D5 /* Pods_TaxAppeal_TaxAppealUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +100,8 @@
 				94A19E7923E548D9003E3B4C /* TaxAppealTests */,
 				94A19E8423E548D9003E3B4C /* TaxAppealUITests */,
 				94A19E6123E548D7003E3B4C /* Products */,
+				F273673BCE81B90931928A3E /* Pods */,
+				DB843F50169DF0A79BEE8E32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,8 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				94A19E6323E548D7003E3B4C /* AppDelegate.swift */,
-				94A19E6523E548D7003E3B4C /* SceneDelegate.swift */,
 				94A19E6723E548D7003E3B4C /* ViewController.swift */,
+				946FFC3723E551DB002ACF86 /* ViewController1.swift */,
+				946FFC3523E54A4C002ACF86 /* TabBarController.swift */,
 				94A19E6923E548D7003E3B4C /* Main.storyboard */,
 				94A19E6C23E548D9003E3B4C /* Assets.xcassets */,
 				94A19E6E23E548D9003E3B4C /* LaunchScreen.storyboard */,
@@ -128,6 +148,29 @@
 			path = TaxAppealUITests;
 			sourceTree = "<group>";
 		};
+		DB843F50169DF0A79BEE8E32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFD6E629A52F22AA37B2CA12 /* Pods_TaxAppeal.framework */,
+				1D8B82DEA8525CF1BB413FBC /* Pods_TaxAppeal_TaxAppealUITests.framework */,
+				38ED8ADA8B251E3E4A9E5B63 /* Pods_TaxAppealTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F273673BCE81B90931928A3E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB36CA69F43CE25CB0CEFBFF /* Pods-TaxAppeal.debug.xcconfig */,
+				5F00C93211CE603D7EB9A933 /* Pods-TaxAppeal.release.xcconfig */,
+				5008A8AA99C8D8C377D19E83 /* Pods-TaxAppeal-TaxAppealUITests.debug.xcconfig */,
+				9C943AE6103EE51445810C80 /* Pods-TaxAppeal-TaxAppealUITests.release.xcconfig */,
+				3887A1349829A189AA61E989 /* Pods-TaxAppealTests.debug.xcconfig */,
+				AE7D79C0ADF156BBAF94F205 /* Pods-TaxAppealTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94A19E8A23E548D9003E3B4C /* Build configuration list for PBXNativeTarget "TaxAppeal" */;
 			buildPhases = (
+				E849291F2EAE31E55107C842 /* [CP] Check Pods Manifest.lock */,
 				94A19E5C23E548D7003E3B4C /* Sources */,
 				94A19E5D23E548D7003E3B4C /* Frameworks */,
 				94A19E5E23E548D7003E3B4C /* Resources */,
+				9C964B3BA0CD993A499DA792 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94A19E8D23E548D9003E3B4C /* Build configuration list for PBXNativeTarget "TaxAppealTests" */;
 			buildPhases = (
+				D5D2F02803190F3E929C6972 /* [CP] Check Pods Manifest.lock */,
 				94A19E7223E548D9003E3B4C /* Sources */,
 				94A19E7323E548D9003E3B4C /* Frameworks */,
 				94A19E7423E548D9003E3B4C /* Resources */,
@@ -170,9 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94A19E9023E548D9003E3B4C /* Build configuration list for PBXNativeTarget "TaxAppealUITests" */;
 			buildPhases = (
+				510D98680BA75678487FFF02 /* [CP] Check Pods Manifest.lock */,
 				94A19E7D23E548D9003E3B4C /* Sources */,
 				94A19E7E23E548D9003E3B4C /* Frameworks */,
 				94A19E7F23E548D9003E3B4C /* Resources */,
+				5258D7786BC742576B122280 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,14 +302,118 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		510D98680BA75678487FFF02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaxAppeal-TaxAppealUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5258D7786BC742576B122280 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaxAppeal-TaxAppealUITests/Pods-TaxAppeal-TaxAppealUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaxAppeal-TaxAppealUITests/Pods-TaxAppeal-TaxAppealUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaxAppeal-TaxAppealUITests/Pods-TaxAppeal-TaxAppealUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C964B3BA0CD993A499DA792 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaxAppeal/Pods-TaxAppeal-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaxAppeal/Pods-TaxAppeal-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaxAppeal/Pods-TaxAppeal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5D2F02803190F3E929C6972 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaxAppealTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E849291F2EAE31E55107C842 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaxAppeal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		94A19E5C23E548D7003E3B4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				94A19E6823E548D7003E3B4C /* ViewController.swift in Sources */,
+				946FFC3823E551DB002ACF86 /* ViewController1.swift in Sources */,
+				946FFC3623E54A4C002ACF86 /* TabBarController.swift in Sources */,
 				94A19E6423E548D7003E3B4C /* AppDelegate.swift in Sources */,
-				94A19E6623E548D7003E3B4C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +584,7 @@
 		};
 		94A19E8B23E548D9003E3B4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB36CA69F43CE25CB0CEFBFF /* Pods-TaxAppeal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +603,7 @@
 		};
 		94A19E8C23E548D9003E3B4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F00C93211CE603D7EB9A933 /* Pods-TaxAppeal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +622,7 @@
 		};
 		94A19E8E23E548D9003E3B4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3887A1349829A189AA61E989 /* Pods-TaxAppealTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +645,7 @@
 		};
 		94A19E8F23E548D9003E3B4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE7D79C0ADF156BBAF94F205 /* Pods-TaxAppealTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +668,7 @@
 		};
 		94A19E9123E548D9003E3B4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5008A8AA99C8D8C377D19E83 /* Pods-TaxAppeal-TaxAppealUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +689,7 @@
 		};
 		94A19E9223E548D9003E3B4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C943AE6103EE51445810C80 /* Pods-TaxAppeal-TaxAppealUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

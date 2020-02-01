@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-TaxAppeal-TaxAppealUITests/Pods-TaxAppeal-TaxAppealUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/BATabBarController/BATabBarController.framework
+${BUILT_PRODUCTS_DIR}/CBFlashyTabBarController/CBFlashyTabBarController.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework

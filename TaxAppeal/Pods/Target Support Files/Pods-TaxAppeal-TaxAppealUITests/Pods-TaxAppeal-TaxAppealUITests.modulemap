@@ -1,0 +1,6 @@
+framework module Pods_TaxAppeal_TaxAppealUITests {
+  umbrella header "Pods-TaxAppeal-TaxAppealUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

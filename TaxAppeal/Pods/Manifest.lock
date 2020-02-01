@@ -1,0 +1,24 @@
+PODS:
+  - BATabBarController (2.0.0):
+    - SnapKit
+  - CBFlashyTabBarController (0.8.3)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - BATabBarController (~> 2.0.0)
+  - CBFlashyTabBarController
+
+SPEC REPOS:
+  trunk:
+    - BATabBarController
+    - CBFlashyTabBarController
+    - SnapKit
+
+SPEC CHECKSUMS:
+  BATabBarController: a4e936e3ae20ea0e55fb20ea7e57eaca302d4e18
+  CBFlashyTabBarController: bc6b11dd4cbc9b54785c8944156e2f4d4f03b088
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 0f868d669d0db39b2bb0c4ddfeab1791b614bb0d
+
+COCOAPODS: 1.8.4
