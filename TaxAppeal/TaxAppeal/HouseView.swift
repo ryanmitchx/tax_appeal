@@ -10,7 +10,11 @@ class HouseViewController: UIViewController {
         Home(address: "3131 S Hoover St", beds: 2, baths: 2, propertyValue: 400000, image: "https://specials-images.forbesimg.com/imageserve/1026205392/960x0.jpg"),
         Home(address: "Address2", beds: 3, baths: 2, propertyValue: 400000, image: "https://www.whatever.com/png")
     ]
-    
+
+    struct HomeValues{
+        static var totalValue: Int = 400000
+        static var numHomes: Int = 2
+    }
     
     override func viewDidLoad() {
         let userZip = keychain["zip"]
@@ -84,6 +88,11 @@ extension HouseViewController: SwipeCardStackDataSource, SwipeCardStackDelegate 
     
     func cardStack(_ cardStack: SwipeCardStack, didSwipeCardAt index: Int, with direction: SwipeDirection) {
         print("Swiped \(direction) on \(homes[index].address)")
+        if(direction == .right){
+            HomeValues.totalValue += homes[index].propertyValue
+            HomeValues.numHomes += 1
+        }
+        print(HomeValues.totalValue)
     }
     
     func cardStack(_ cardStack: SwipeCardStack, didSelectCardAt index: Int) {

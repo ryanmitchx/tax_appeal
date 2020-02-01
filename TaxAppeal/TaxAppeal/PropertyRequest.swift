@@ -38,6 +38,7 @@ class PropertyRequest: Decodable {
                 return
             }
             do {
+                print("hi")
                 let results = try JSONDecoder().decode(PropertyResponse.self, from: data)
                 completionHandler(.success(results.properties))
             }catch {
