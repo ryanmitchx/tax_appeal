@@ -6,29 +6,37 @@ class SampleCardFooterView: UIView {
     
     private var gradientLayer: CAGradientLayer?
     
-    init(withTitle title: String?, subtitle: String?) {
+    init(withAddress address: String?, assessedValue: String?, subtitle: String?) {
         super.init(frame: CGRect.zero)
         backgroundColor = .clear
         layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         layer.cornerRadius = 10
         clipsToBounds = true
         isOpaque = false
-        initialize(title: title, subtitle: subtitle)
+        initialize(address: address, assessedValue: assessedValue, subtitle: subtitle)
     }
     
     required init?(coder aDecoder: NSCoder) {
         return nil
     }
     
-    private func initialize(title: String?, subtitle: String?) {
-        let attributedText = NSMutableAttributedString(string: (title ?? "") + "\n", attributes: NSAttributedString.Key.titleAttributes)
-        if let subtitle = subtitle, subtitle != "" {
-            attributedText.append(NSMutableAttributedString(string: subtitle, attributes: NSAttributedString.Key.subtitleAttributes))
+    private func initialize(address: String?, assessedValue: String?, subtitle: String?) {
+        let attributedText = NSMutableAttributedString(string: (address ?? "") + "\n", attributes: NSAttributedString.Key.addressAttributes)
+        if let assessedValue = assessedValue, assessedValue != "" {
+            attributedText.append(NSMutableAttributedString(string: "Assessed value: $\(assessedValue)", attributes: NSAttributedString.Key.assessedValueAttributes))
             let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.lineSpacing = 4
+            paragraphStyle.lineSpacing = 2
             paragraphStyle.lineBreakMode = .byTruncatingTail
             attributedText.addAttributes([NSAttributedString.Key.paragraphStyle: paragraphStyle], range: NSRange(location: 0, length: attributedText.length))
-            label.numberOfLines = 2
+            label.numberOfLines = 3
+        }
+        if let subtitle = subtitle, subtitle != "" {
+            attributedText.append(NSMutableAttributedString(string: "\n\(subtitle)", attributes: NSAttributedString.Key.subtitleAttributes))
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 2
+            paragraphStyle.lineBreakMode = .byTruncatingTail
+            attributedText.addAttributes([NSAttributedString.Key.paragraphStyle: paragraphStyle], range: NSRange(location: 0, length: attributedText.length))
+            label.numberOfLines = 3
         }
         
         label.attributedText = attributedText
@@ -54,14 +62,20 @@ extension NSAttributedString.Key {
         return shadow
     }()
     
-    static var titleAttributes: [NSAttributedString.Key: Any] = [
-        NSAttributedString.Key.font: UIFont(name: "ArialRoundedMTBold", size: 24)!,
+    static var addressAttributes: [NSAttributedString.Key: Any] = [
+        NSAttributedString.Key.font: UIFont(name: "Futura-CondensedMedium", size: 32)!,
+        NSAttributedString.Key.foregroundColor: UIColor.white,
+        NSAttributedString.Key.shadow: NSAttributedString.Key.shadowAttribute
+    ]
+    
+    static var assessedValueAttributes: [NSAttributedString.Key: Any] = [
+        NSAttributedString.Key.font: UIFont(name: "Futura-Medium", size: 18)!,
         NSAttributedString.Key.foregroundColor: UIColor.white,
         NSAttributedString.Key.shadow: NSAttributedString.Key.shadowAttribute
     ]
     
     static var subtitleAttributes: [NSAttributedString.Key: Any] = [
-        NSAttributedString.Key.font: UIFont(name: "Arial", size: 17)!,
+        NSAttributedString.Key.font: UIFont(name: "Baskerville-Italic", size: 18)!,
         NSAttributedString.Key.foregroundColor: UIColor.white,
         NSAttributedString.Key.shadow: NSAttributedString.Key.shadowAttribute
     ]

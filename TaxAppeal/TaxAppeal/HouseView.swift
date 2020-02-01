@@ -1,67 +1,24 @@
 import Shuffle_iOS
-import PopBounceButton
+import KeychainAccess
 
 class HouseViewController: UIViewController {
     
     private let cardStack = SwipeCardStack()
-        
-    private let cardModels = [
-        SampleCardModel(name: "Michelle",
-                        age: 26,
-                        occupation: "Graphic Designer",
-                        image: UIImage(named: "michelle")),
-        SampleCardModel(name: "Joshua",
-                        age: 27,
-                        occupation: "Business Services Sales Representative",
-                        image: UIImage(named: "joshua")),
-        SampleCardModel(name: "Daiane",
-                        age: 23,
-                        occupation: "Graduate Student",
-                        image: UIImage(named: "daiane")),
-        SampleCardModel(name: "Julian",
-                        age: 25,
-                        occupation: "Model/Photographer",
-                        image: UIImage(named: "julian")),
-        SampleCardModel(name: "Andrew",
-                        age: 26,
-                        occupation: nil,
-                        image: UIImage(named: "andrew")),
-        SampleCardModel(name: "Bailey",
-                        age: 25,
-                        occupation: "Software Engineer",
-                        image: UIImage(named: "bailey")),
-        SampleCardModel(name: "Rachel",
-                        age: 27,
-                        occupation: "Interior Designer",
-                        image: UIImage(named: "rachel"))
+    private let keychain = Keychain(service: "com.brs.TaxAppeal")
+    
+    private let homes = [
+        Home(address: "3131 S Hoover St", beds: 2, baths: 2, propertyValue: 400000, image: "https://specials-images.forbesimg.com/imageserve/1026205392/960x0.jpg"),
+        Home(address: "Address2", beds: 3, baths: 2, propertyValue: 400000, image: "https://www.whatever.com/png")
     ]
     
     override func viewDidLoad() {
+        var userAddress = keychain["address"]
+        
         cardStack.delegate = self
         cardStack.dataSource = self
-        configureNavigationBar()
+//        configureNavigationBar()
         layoutCardStackView()
         configureBackgroundGradient()
-    }
-    
-    private func configureNavigationBar() {
-        let backButton = UIBarButtonItem(title: "Back",
-                                         style: .plain,
-                                         target: self,
-                                         action: #selector(handleShift))
-        backButton.tag = 1
-        backButton.tintColor = .lightGray
-        navigationItem.leftBarButtonItem = backButton
-        
-        let forwardButton = UIBarButtonItem(title: "Forward",
-                                            style: .plain,
-                                            target: self,
-                                            action: #selector(handleShift))
-        forwardButton.tag = 2
-        forwardButton.tintColor = .lightGray
-        navigationItem.rightBarButtonItem = forwardButton
-
-        navigationController?.navigationBar.layer.zPosition = -1
     }
     
     private func configureBackgroundGradient() {
@@ -86,18 +43,16 @@ class HouseViewController: UIViewController {
     }
 }
 
-//MARK: Data Source + Delegates
-
 extension HouseViewController: SwipeCardStackDataSource, SwipeCardStackDelegate {
     
     func cardStack(_ cardStack: SwipeCardStack, cardForIndexAt index: Int) -> SwipeCard {
-        let card = SampleCard()
-        card.configure(withModel: cardModels[index])
+        let card = HomeCard()
+        card.configure(withHome: homes[index])
         return card
     }
     
     func numberOfCards(in cardStack: SwipeCardStack) -> Int {
-        return cardModels.count
+        return homes.count
     }
     
     func didSwipeAllCards(_ cardStack: SwipeCardStack) {
@@ -105,11 +60,11 @@ extension HouseViewController: SwipeCardStackDataSource, SwipeCardStackDelegate 
     }
     
     func cardStack(_ cardStack: SwipeCardStack, didUndoCardAt index: Int, from direction: SwipeDirection) {
-        print("Undo \(direction) swipe on \(cardModels[index].name)")
+        print("Undo \(direction) swipe on \(homes[index].address)")
     }
     
     func cardStack(_ cardStack: SwipeCardStack, didSwipeCardAt index: Int, with direction: SwipeDirection) {
-        print("Swiped \(direction) on \(cardModels[index].name)")
+        print("Swiped \(direction) on \(homes[index].address)")
     }
     
     func cardStack(_ cardStack: SwipeCardStack, didSelectCardAt index: Int) {

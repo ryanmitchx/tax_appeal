@@ -1,14 +1,15 @@
 import Shuffle_iOS
+import SDWebImage
 
-class SampleCard: SwipeCard {
+class HomeCard: SwipeCard {
     
     override var swipeDirections: [SwipeDirection] {
-        return [.left, .up, .right]
+        return [.left, .right]
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        footerHeight = 80
+        footerHeight = 140
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -19,8 +20,8 @@ class SampleCard: SwipeCard {
         switch direction {
         case .left:
             return SampleCardOverlay.left()
-        case .up:
-            return SampleCardOverlay.up()
+//        case .up:
+//            return SampleCardOverlay.up()
         case.right:
             return SampleCardOverlay.right()
         default:
@@ -28,8 +29,23 @@ class SampleCard: SwipeCard {
         }
     }
     
-    func configure(withModel model: SampleCardModel) {
-        content = SampleCardContentView(withImage: model.image)
-        footer = SampleCardFooterView(withTitle: "\(model.name), \(model.age)", subtitle: model.occupation)
+    func configure(withHome home: Home) {
+        downloadImage(from: URL(string: home.image)!)
+        footer = SampleCardFooterView(withAddress: "\(home.address)", assessedValue: "\(home.propertyValue)", subtitle: String("\(home.beds) bedrooms, \(home.baths) baths"))
     }
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
+    func downloadImage(from url: URL) {
+        print("Download Started")
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            DispatchQueue.main.async() {
+                self.content = SampleCardContentView(withImage: UIImage(data: data))
+            }
+        }
+    }
+    
 }

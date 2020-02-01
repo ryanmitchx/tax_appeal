@@ -11,7 +11,6 @@ import CBFlashyTabBarController
 
 class TabBarController: UITabBarController {
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,10 +29,11 @@ class TabBarController: UITabBarController {
         neighborhood.tabBarItem = UITabBarItem()
         neighborhood.tabBarItem.title = "Neighborhood"
         neighborhood.tabBarItem.image = UIImage(named: "houses") as UIImage?
-        let myHome = ViewController1()
+        let myHome = MyHomeViewController()
         myHome.tabBarItem = UITabBarItem()
         myHome.tabBarItem.title = "My Home"
-        myHome.tabBarItem.image = UIImage(named: "my-house") as UIImage?
+        myHome.tabBarItem.image = UIImage(systemName: "person.circle")
+//        myHome.tabBarItem.image = UIImage(named: "my-house") as UIImage?
         let settings = ViewController()
         settings.tabBarItem = UITabBarItem()
         settings.tabBarItem.title = "Settings"
