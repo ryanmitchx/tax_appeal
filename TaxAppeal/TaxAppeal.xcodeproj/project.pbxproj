@@ -11,6 +11,7 @@
 		89D1DA1F75E0AD15BE13E247 /* Pods_TaxAppealTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38ED8ADA8B251E3E4A9E5B63 /* Pods_TaxAppealTests.framework */; };
 		946FFC3623E54A4C002ACF86 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FFC3523E54A4C002ACF86 /* TabBarController.swift */; };
 		946FFC3823E551DB002ACF86 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FFC3723E551DB002ACF86 /* ViewController1.swift */; };
+		946FFC3A23E56B5D002ACF86 /* HouseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946FFC3923E56B5D002ACF86 /* HouseView.swift */; };
 		94A19E6423E548D7003E3B4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A19E6323E548D7003E3B4C /* AppDelegate.swift */; };
 		94A19E6823E548D7003E3B4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A19E6723E548D7003E3B4C /* ViewController.swift */; };
 		94A19E6B23E548D7003E3B4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A19E6923E548D7003E3B4C /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		5F00C93211CE603D7EB9A933 /* Pods-TaxAppeal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxAppeal.release.xcconfig"; path = "Target Support Files/Pods-TaxAppeal/Pods-TaxAppeal.release.xcconfig"; sourceTree = "<group>"; };
 		946FFC3523E54A4C002ACF86 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		946FFC3723E551DB002ACF86 /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
+		946FFC3923E56B5D002ACF86 /* HouseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseView.swift; sourceTree = "<group>"; };
 		94A19E6023E548D7003E3B4C /* TaxAppeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxAppeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A19E6323E548D7003E3B4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94A19E6723E548D7003E3B4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				94A19E6723E548D7003E3B4C /* ViewController.swift */,
 				946FFC3723E551DB002ACF86 /* ViewController1.swift */,
 				946FFC3523E54A4C002ACF86 /* TabBarController.swift */,
+				946FFC3923E56B5D002ACF86 /* HouseView.swift */,
 				94A19E6923E548D7003E3B4C /* Main.storyboard */,
 				94A19E6C23E548D9003E3B4C /* Assets.xcassets */,
 				94A19E6E23E548D9003E3B4C /* LaunchScreen.storyboard */,
@@ -410,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				946FFC3A23E56B5D002ACF86 /* HouseView.swift in Sources */,
 				94A19E6823E548D7003E3B4C /* ViewController.swift in Sources */,
 				946FFC3823E551DB002ACF86 /* ViewController1.swift in Sources */,
 				946FFC3623E54A4C002ACF86 /* TabBarController.swift in Sources */,

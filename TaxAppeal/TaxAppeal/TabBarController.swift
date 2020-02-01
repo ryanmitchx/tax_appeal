@@ -8,27 +8,14 @@
 
 import UIKit
 import CBFlashyTabBarController
+import Koloda
 
-class TabBarController: UIViewController {
+class TabBarController: UITabBarController {
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let myHome = ViewController()
-        myHome.tabBarItem = UITabBarItem()
-        myHome.tabBarItem.title = "My Home"
-        myHome.tabBarItem.image = UIImage(named: "my-house") as UIImage?
-        let neighborhood = ViewController1()
-        neighborhood.tabBarItem = UITabBarItem()
-        neighborhood.tabBarItem.title = "Other Homes"
-        neighborhood.tabBarItem.image = UIImage(named: "houses") as UIImage?
-        let settings = ViewController()
         
-        let tbc = CBFlashyTabBarController()
-        tbc.viewControllers = [neighborhood, myHome]
-        self.view.addSubview(tbc.view)
-        print("hello")
-//        self.present(tbc, animated: true, completion: nil)
 //        let tb1 = BATabBarItem(image: UIImage(named: "houses")!, selectedImage: UIImage(named: "houses-selected")!)
 //        let baTabBarController = BATabBarController()
 //        baTabBarController.viewControllers = [vc1]
@@ -38,6 +25,28 @@ class TabBarController: UIViewController {
 //        self.view.addSubview(baTabBarController.view)
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let neighborhood = ViewController()
+        neighborhood.tabBarItem = UITabBarItem()
+        neighborhood.tabBarItem.title = "Neighborhood"
+        neighborhood.tabBarItem.image = UIImage(named: "houses") as UIImage?
+        let myHome = ViewController1()
+        myHome.tabBarItem = UITabBarItem()
+        myHome.tabBarItem.title = "My Home"
+        myHome.tabBarItem.image = UIImage(named: "my-house") as UIImage?
+        let settings = ViewController()
+        settings.tabBarItem = UITabBarItem()
+        settings.tabBarItem.title = "Settings"
+        settings.tabBarItem.image = UIImage(systemName: "gear")
+        let tbc = CBFlashyTabBarController()
+        tbc.viewControllers = [neighborhood, myHome, settings]
+        print("hello")
+        tbc.modalPresentationStyle = .fullScreen
+        self.present(tbc, animated: false, completion: nil)
+    }
+    
+    
     
 
     /*

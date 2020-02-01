@@ -6,8 +6,8 @@ target 'TaxAppeal' do
   use_frameworks!
 
   # Pods for TaxAppeal
-  pod 'BATabBarController', '~> 2.0.0'
   pod 'CBFlashyTabBarController'
+  pod 'Koloda'
   target 'TaxAppealTests' do
     inherit! :search_paths
     # Pods for testing

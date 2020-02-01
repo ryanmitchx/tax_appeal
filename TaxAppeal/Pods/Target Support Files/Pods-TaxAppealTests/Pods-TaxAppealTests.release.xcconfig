@@ -1,7 +1,7 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/BATabBarController" "${PODS_CONFIGURATION_BUILD_DIR}/CBFlashyTabBarController" "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CBFlashyTabBarController" "${PODS_CONFIGURATION_BUILD_DIR}/Koloda" "${PODS_CONFIGURATION_BUILD_DIR}/pop"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/BATabBarController/BATabBarController.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/CBFlashyTabBarController/CBFlashyTabBarController.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "BATabBarController" -framework "CBFlashyTabBarController" -framework "SnapKit" -framework "UIKit"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/CBFlashyTabBarController/CBFlashyTabBarController.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Koloda/Koloda.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/pop/pop.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -l"c++" -framework "CBFlashyTabBarController" -framework "Koloda" -framework "UIKit" -framework "pop"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
