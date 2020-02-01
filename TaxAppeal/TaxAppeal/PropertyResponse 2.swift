@@ -14,6 +14,7 @@ struct PropertyResponse: Decodable {
     init(from decoder: Decoder) throws {
         var properties = [Property]()
         var container = try decoder.unkeyedContainer()
+        print(container)
         while !container.isAtEnd {
             //print("hello")
             if let house = try? container.decode(Property.self) {

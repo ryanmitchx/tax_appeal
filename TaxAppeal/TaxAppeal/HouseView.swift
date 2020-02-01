@@ -11,8 +11,27 @@ class HouseViewController: UIViewController {
         Home(address: "Address2", beds: 3, baths: 2, propertyValue: 400000, image: "https://www.whatever.com/png")
     ]
     
+    
     override func viewDidLoad() {
-        var userAddress = keychain["address"]
+        let userZip = keychain["zip"]
+        PropertyRequest().getDetails(zip: userZip ?? "90007") { result in
+          switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let properties):
+                let myProperty: Property = properties[0]
+                PropertyRequest().getProperties(myHouse: myProperty) { result in
+                    switch result {
+                      case .failure(let error):
+                          print(error)
+                      case .success(let properties):
+                        for prop in properties {
+                            print(prop.bathrooms + " " + prop.bedrooms)
+                        }
+                    }
+                }
+            }
+        }
         
         cardStack.delegate = self
         cardStack.dataSource = self

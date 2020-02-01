@@ -64,7 +64,8 @@ class MyHomeViewController: UIViewController {
 
     @objc func handleTouchUpInside(sender: UIButton!) {
         if sender == setAddressButton{
-            keychain["address"] = addressTF.text
+            keychain["zip"] = addressTF.text
+
         }
     }
     

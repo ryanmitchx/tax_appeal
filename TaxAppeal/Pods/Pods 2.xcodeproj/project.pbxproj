@@ -1,0 +1,1273 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00B51D70276B9521382501FE14BD1CFD /* SwipeCardStackDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D08F5EE5CA765B685DB884D2B74B6B1 /* SwipeCardStackDelegate.swift */; };
+		0340FDF968915D4D90708AFBE83340B1 /* CardStackTransformProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471C0D835003641F60EEF35D2BE5FAD /* CardStackTransformProvider.swift */; };
+		054C8AF7CA3B5278580B2F68F057A4C3 /* SwipeCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D59CB6DE2EF5E0CCBCCA25FDC3BE18 /* SwipeCardStack.swift */; };
+		0BA46128F8D7479CCD09B2E88C109DB5 /* CBTabItemBasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351E6DD490F6AA523F8A692B5CB5BB6A /* CBTabItemBasicAnimation.swift */; };
+		1D308EC63708D0BD0D9DE9C421141BAF /* CardStackAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CF8F3CE345E965B49721A3D43E4587 /* CardStackAnimator.swift */; };
+		1FEF43CF5C763B58B8B196EE003944AE /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB0E00729E92AC5F992C06586E8BD4 /* CGPoint+Extensions.swift */; };
+		24639D359C3BE20FC9229F0D369101EA /* Shuffle.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F04FA411F93116AF1357A256D7E94C /* Shuffle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2514CB1BBB432A08138E92441249C63D /* CardStackLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0E4DBA0034A4429918D681372C913 /* CardStackLayoutProvider.swift */; };
+		2D54BD2C676D62BA5B2EF4994E542697 /* CardLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9797C35AAC5372151659CD0D10462A58 /* CardLayoutProvider.swift */; };
+		3305506A76E6145173C8730610AFF31B /* Pods-TaxAppeal-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DF3284969783382BB6526D5A21812BBC /* Pods-TaxAppeal-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37B2EDA9F1A4698B2EB3238AB40DCDB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		41D9064B44905FE30B8B5116540C0E78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		42C7D007F7A71B750DB49B79B246CA67 /* SwipeCardStackDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921595A3D780AB8B3471F7BDA0A16B45 /* SwipeCardStackDataSource.swift */; };
+		453906E3DEEE16880E626305EE378DFC /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3296A1BBC4004FE0ECDCCE6889A5F6FA /* Array+Extensions.swift */; };
+		4826AE8E26C4E26229F8B7FF448C0974 /* Pods-TaxAppealTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F6C8C43B00E4A87286FE4D373B9DF /* Pods-TaxAppealTests-dummy.m */; };
+		4DCBE3FD9516343EC2F88E21C98F6545 /* CBFlashyTabBarController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1EC2DFADE5780BE2418CE2C9D91758F /* CBFlashyTabBarController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56397D98E4F620971ED1DB5314302FAB /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256C2A3F367AB3FE84974C8C469B293B /* SwipeDirection.swift */; };
+		5A15123627499A1087BD267801BA5BFC /* CBTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C4D69419893A36CFAA36E9F574FD31 /* CBTabBarButton.swift */; };
+		5A711F8CA73995AF26A582B765A22675 /* CGVector+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F830430AE149E1AC0BBB3CB16E6CBD1 /* CGVector+Extensions.swift */; };
+		768F57AF5C8052D7E1F05525472C5DC6 /* Pods-TaxAppeal-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 475847001EFCF871853B27E65A23B963 /* Pods-TaxAppeal-dummy.m */; };
+		7E4FE6B013EB29778FB80560F10951E5 /* SwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAB068280645D44FF8F6F7C29A1CB66 /* SwipeCard.swift */; };
+		7E59F6ABD43700E7AF7760FAD557A76A /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3F16A0D08A27AFDC2EA1EF43A96E13 /* SwipeView.swift */; };
+		8605378E763C15F5BFA833C339CC4216 /* Pods-TaxAppealTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E803422B15C00F3EAA1B8B880FFB8FD7 /* Pods-TaxAppealTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87E32330C480E15EA28EE9F7D772696F /* CBTabItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F13CFE26E15D022135D41AEDD963DB /* CBTabItemAnimation.swift */; };
+		8986CC7B2C9C15F1917E798117F644DC /* CBFlashyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FAEA0E73BD817B930A74E4488E4E0 /* CBFlashyTabBar.swift */; };
+		8D1F107B5C0C20879940DA7F0D76B57D /* Shuffle-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B7E52B3C0A58DB02ADF2E369597DCCE /* Shuffle-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92492D08B5FF542DDD2DF65BBEC64727 /* CBTabItemDeselectAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADDBDE79F278B352DADA8B19D2BB84D /* CBTabItemDeselectAnimation.swift */; };
+		A106248C291BD9B467B26FC9CFD80027 /* CardAnimationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B839737ED13C4FE806F58F9C5B5FB /* CardAnimationOptions.swift */; };
+		A211362205D10B7E1EB641AC03BB97EF /* CBTabItemSelectAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39C0A8214D5CB0FBD25AF09917FEABF /* CBTabItemSelectAnimation.swift */; };
+		ADA17D1D0853A2EAEB9EF68EFC9C3BA1 /* CardTransformProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D37BEC8B88556C64FA169F0E263CB77 /* CardTransformProvider.swift */; };
+		AE5D9A2D84FEF8C5F0E944A91FC049A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		B62CE540AEC6C3C0CCEBC83B4EC04514 /* CBFlashyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24594387476161DCD54415FFCBDB72C4 /* CBFlashyTabBarController.swift */; };
+		B6C1CB03293EC15F429446B21B6B6581 /* CardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4458A3C6767C3672B9A9E319AB3EA4A2 /* CardAnimator.swift */; };
+		B9C16D0FDFD42D6811500C92EFF495E6 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF98912C7F3CD6BDF2F54229E98AAD7F /* Animator.swift */; };
+		C8570C5AD12CCD9BC36C5D84CACBCC5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		C9E842D41797378EC67CE1E35DD07B14 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452C6E6D78D35EDF3F2620332CB24892 /* UIView+Extensions.swift */; };
+		CBE763E372665794010800F08058D90E /* Shuffle-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DFEF925A3B67E94B77B301930B47BA /* Shuffle-iOS-dummy.m */; };
+		DAB1F1F793D3AAA24E22085772551491 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		DFAE6534565BFBC958343046F90149A6 /* Pods-TaxAppeal-TaxAppealUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B732B776D02EC375CB72BD361A8D4E7 /* Pods-TaxAppeal-TaxAppealUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6DD27ABFD02F10A028AF04F660C6E8B /* SwipeCardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCDE875F2C72737FF6133B189E9FECF /* SwipeCardDelegate.swift */; };
+		E82E20D4B21D30CC8A06C5CF540FDCF8 /* CBFlashyTabBarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2BA61728D333563065DDEF0C39475F /* CBFlashyTabBarController-dummy.m */; };
+		ED190DACDCD9926C4424E075CA38A82F /* CardStackAnimationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F247A627956D2A3782ADCCDBCE90B55 /* CardStackAnimationOptions.swift */; };
+		F73A3E0DF6BAA2EB644207FFDCD4D591 /* CardStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE635FF8C3BF6EE12520B1F88E1E230 /* CardStackState.swift */; };
+		FD0FEA95A14C9F9F07ACD0771E49144A /* Pods-TaxAppeal-TaxAppealUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B3C22FA36A1DF4D840E4367A8361FD /* Pods-TaxAppeal-TaxAppealUITests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13BC20F256BCE069F3DF93BA85343733 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CE4608D13EB4E75FE6B40D38210294E;
+			remoteInfo = "Shuffle-iOS";
+		};
+		3587A3E3E7DE0C6C2178A44932AC412C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 105961A83B30ED92F56A3BA4F6E3DDAB;
+			remoteInfo = "Pods-TaxAppeal";
+		};
+		7338DD2506579856B0F02707E3830360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5737872A76EFCB2A97F445D9434307C7;
+			remoteInfo = CBFlashyTabBarController;
+		};
+		76B09C22D435F9B6D35385B15C93C38A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5737872A76EFCB2A97F445D9434307C7;
+			remoteInfo = CBFlashyTabBarController;
+		};
+		9F7E25246AD3603476F918C21BBAF41B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CE4608D13EB4E75FE6B40D38210294E;
+			remoteInfo = "Shuffle-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07AFBA63C86EF52DE84CC98B53640985 /* Pods-TaxAppeal.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaxAppeal.modulemap"; sourceTree = "<group>"; };
+		07D4E958BAD766CBA1D48DEB63D524C9 /* CBFlashyTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CBFlashyTabBarController.framework; path = CBFlashyTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DFE6751281AB97080D33D549BFF5583 /* Shuffle-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Shuffle-iOS.modulemap"; sourceTree = "<group>"; };
+		0E7F6C8C43B00E4A87286FE4D373B9DF /* Pods-TaxAppealTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaxAppealTests-dummy.m"; sourceTree = "<group>"; };
+		1084A490470FBF219389FC8396F69510 /* Pods-TaxAppeal-TaxAppealUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaxAppeal-TaxAppealUITests-Info.plist"; sourceTree = "<group>"; };
+		113FBEDC0BE924ECE60F19A1F2FCF092 /* Shuffle-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Shuffle-iOS-Info.plist"; sourceTree = "<group>"; };
+		12C5C42FA11F3B8955EE3DB5DA2EEBA7 /* Pods-TaxAppeal-TaxAppealUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaxAppeal-TaxAppealUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		13CF8F3CE345E965B49721A3D43E4587 /* CardStackAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardStackAnimator.swift; path = Sources/Shuffle/SwipeCardStack/CardStackAnimator.swift; sourceTree = "<group>"; };
+		1717AA1C0873587726EC30183B49A9B3 /* Pods_TaxAppeal_TaxAppealUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaxAppeal_TaxAppealUITests.framework; path = "Pods-TaxAppeal-TaxAppealUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1914EB32CB3199A2981D57A62E578A7B /* Pods-TaxAppealTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaxAppealTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		24594387476161DCD54415FFCBDB72C4 /* CBFlashyTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBFlashyTabBarController.swift; path = CBFlashyTabBarController/Classes/CBFlashyTabBarController.swift; sourceTree = "<group>"; };
+		256C2A3F367AB3FE84974C8C469B293B /* SwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeDirection.swift; path = Sources/Shuffle/SwipeDirection.swift; sourceTree = "<group>"; };
+		29F4913D7C9D6B56FA98AE3C06C97808 /* Pods_TaxAppealTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaxAppealTests.framework; path = "Pods-TaxAppealTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B7E52B3C0A58DB02ADF2E369597DCCE /* Shuffle-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Shuffle-iOS-umbrella.h"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3296A1BBC4004FE0ECDCCE6889A5F6FA /* Array+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Extensions.swift"; path = "Sources/Shuffle/Internal/Array+Extensions.swift"; sourceTree = "<group>"; };
+		34B9BBE7C1A83738EB3F188304ABC7F8 /* CBFlashyTabBarController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CBFlashyTabBarController.xcconfig; sourceTree = "<group>"; };
+		351E6DD490F6AA523F8A692B5CB5BB6A /* CBTabItemBasicAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBTabItemBasicAnimation.swift; path = CBFlashyTabBarController/Classes/Animation/CBTabItemBasicAnimation.swift; sourceTree = "<group>"; };
+		3B0ECE3B56DBB107A307DC9FF0280A7E /* Pods-TaxAppeal-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaxAppeal-Info.plist"; sourceTree = "<group>"; };
+		41D71F64EE832B9FF6A0F564C5BEE80B /* Pods-TaxAppeal-TaxAppealUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaxAppeal-TaxAppealUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		42B3C22FA36A1DF4D840E4367A8361FD /* Pods-TaxAppeal-TaxAppealUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaxAppeal-TaxAppealUITests-dummy.m"; sourceTree = "<group>"; };
+		4458A3C6767C3672B9A9E319AB3EA4A2 /* CardAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardAnimator.swift; path = Sources/Shuffle/SwipeCard/CardAnimator.swift; sourceTree = "<group>"; };
+		452C6E6D78D35EDF3F2620332CB24892 /* UIView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extensions.swift"; path = "Sources/Shuffle/Internal/UIView+Extensions.swift"; sourceTree = "<group>"; };
+		475847001EFCF871853B27E65A23B963 /* Pods-TaxAppeal-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaxAppeal-dummy.m"; sourceTree = "<group>"; };
+		48F0E4DBA0034A4429918D681372C913 /* CardStackLayoutProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardStackLayoutProvider.swift; path = Sources/Shuffle/SwipeCardStack/CardStackLayoutProvider.swift; sourceTree = "<group>"; };
+		49215D45126E7AFFA0FA00B3CD1C6C91 /* Pods_TaxAppeal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaxAppeal.framework; path = "Pods-TaxAppeal.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C2BA61728D333563065DDEF0C39475F /* CBFlashyTabBarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CBFlashyTabBarController-dummy.m"; sourceTree = "<group>"; };
+		4EE67F0C685FE01A16E4F467F5BC59F5 /* CBFlashyTabBarController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CBFlashyTabBarController-Info.plist"; sourceTree = "<group>"; };
+		5F71CFC10421E98D4C0148C67377C059 /* CBFlashyTabBarController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CBFlashyTabBarController-prefix.pch"; sourceTree = "<group>"; };
+		5F830430AE149E1AC0BBB3CB16E6CBD1 /* CGVector+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGVector+Extensions.swift"; path = "Sources/Shuffle/Internal/CGVector+Extensions.swift"; sourceTree = "<group>"; };
+		5FFB0E00729E92AC5F992C06586E8BD4 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGPoint+Extensions.swift"; path = "Sources/Shuffle/Internal/CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		604534D98930CB7C705C4B27BD0F04F6 /* Pods-TaxAppealTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaxAppealTests.debug.xcconfig"; sourceTree = "<group>"; };
+		60C84867715B6E77C6ABD49A29EA9D6E /* Shuffle-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Shuffle-iOS-prefix.pch"; sourceTree = "<group>"; };
+		60F13CFE26E15D022135D41AEDD963DB /* CBTabItemAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBTabItemAnimation.swift; path = CBFlashyTabBarController/Classes/Animation/CBTabItemAnimation.swift; sourceTree = "<group>"; };
+		62BB8CCBAE8C76420203CFDD1E3105EA /* Pods-TaxAppeal-TaxAppealUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaxAppeal-TaxAppealUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		6BE635FF8C3BF6EE12520B1F88E1E230 /* CardStackState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardStackState.swift; path = Sources/Shuffle/SwipeCardStack/CardStackState.swift; sourceTree = "<group>"; };
+		6C5304F659DB54816C18A64C6D092443 /* Pods-TaxAppealTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaxAppealTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6D08F5EE5CA765B685DB884D2B74B6B1 /* SwipeCardStackDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCardStackDelegate.swift; path = Sources/Shuffle/SwipeCardStack/SwipeCardStackDelegate.swift; sourceTree = "<group>"; };
+		6D37BEC8B88556C64FA169F0E263CB77 /* CardTransformProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardTransformProvider.swift; path = Sources/Shuffle/SwipeCard/CardTransformProvider.swift; sourceTree = "<group>"; };
+		6DB158EB3B6618D2D2AD9AA34D29ED5E /* Pods-TaxAppeal-TaxAppealUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaxAppeal-TaxAppealUITests-frameworks.sh"; sourceTree = "<group>"; };
+		78F9B703B983F54253CA757F2B62BE2F /* Pods-TaxAppealTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaxAppealTests.release.xcconfig"; sourceTree = "<group>"; };
+		7B732B776D02EC375CB72BD361A8D4E7 /* Pods-TaxAppeal-TaxAppealUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaxAppeal-TaxAppealUITests-umbrella.h"; sourceTree = "<group>"; };
+		7F247A627956D2A3782ADCCDBCE90B55 /* CardStackAnimationOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardStackAnimationOptions.swift; path = Sources/Shuffle/SwipeCardStack/CardStackAnimationOptions.swift; sourceTree = "<group>"; };
+		8C2420142B48759B759A2010B40E986A /* Pods-TaxAppealTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaxAppealTests-Info.plist"; sourceTree = "<group>"; };
+		90F04FA411F93116AF1357A256D7E94C /* Shuffle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Shuffle.h; path = Sources/Shuffle.h; sourceTree = "<group>"; };
+		921595A3D780AB8B3471F7BDA0A16B45 /* SwipeCardStackDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCardStackDataSource.swift; path = Sources/Shuffle/SwipeCardStack/SwipeCardStackDataSource.swift; sourceTree = "<group>"; };
+		9797C35AAC5372151659CD0D10462A58 /* CardLayoutProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardLayoutProvider.swift; path = Sources/Shuffle/SwipeCard/CardLayoutProvider.swift; sourceTree = "<group>"; };
+		9900F40D8650D412D244426CF6620465 /* Pods-TaxAppealTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaxAppealTests.modulemap"; sourceTree = "<group>"; };
+		9CF2FD06CDB6745916001C1580CF4A88 /* Pods-TaxAppeal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaxAppeal.debug.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A27AA04875A39B1EF55930A0799FD328 /* Pods-TaxAppeal-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaxAppeal-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C39C0A8214D5CB0FBD25AF09917FEABF /* CBTabItemSelectAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBTabItemSelectAnimation.swift; path = CBFlashyTabBarController/Classes/Animation/CBTabItemSelectAnimation.swift; sourceTree = "<group>"; };
+		C6C4D69419893A36CFAA36E9F574FD31 /* CBTabBarButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBTabBarButton.swift; path = CBFlashyTabBarController/Classes/CBTabBarButton.swift; sourceTree = "<group>"; };
+		C6DFEF925A3B67E94B77B301930B47BA /* Shuffle-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Shuffle-iOS-dummy.m"; sourceTree = "<group>"; };
+		CADDBDE79F278B352DADA8B19D2BB84D /* CBTabItemDeselectAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBTabItemDeselectAnimation.swift; path = CBFlashyTabBarController/Classes/Animation/CBTabItemDeselectAnimation.swift; sourceTree = "<group>"; };
+		CD3EE4FA304AF79E782A53A31CD14367 /* Pods-TaxAppeal-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaxAppeal-acknowledgements.plist"; sourceTree = "<group>"; };
+		D1EC2DFADE5780BE2418CE2C9D91758F /* CBFlashyTabBarController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CBFlashyTabBarController-umbrella.h"; sourceTree = "<group>"; };
+		D1EFF1B3F8D42933E5BE51E16890F0F3 /* Pods-TaxAppeal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaxAppeal.release.xcconfig"; sourceTree = "<group>"; };
+		D3D59CB6DE2EF5E0CCBCCA25FDC3BE18 /* SwipeCardStack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCardStack.swift; path = Sources/Shuffle/SwipeCardStack/SwipeCardStack.swift; sourceTree = "<group>"; };
+		D3F04B8FEA97491F35265F8BC58450EB /* Pods-TaxAppeal-TaxAppealUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TaxAppeal-TaxAppealUITests.modulemap"; sourceTree = "<group>"; };
+		D471C0D835003641F60EEF35D2BE5FAD /* CardStackTransformProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardStackTransformProvider.swift; path = Sources/Shuffle/SwipeCardStack/CardStackTransformProvider.swift; sourceTree = "<group>"; };
+		D92B839737ED13C4FE806F58F9C5B5FB /* CardAnimationOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardAnimationOptions.swift; path = Sources/Shuffle/SwipeCard/CardAnimationOptions.swift; sourceTree = "<group>"; };
+		DAAB068280645D44FF8F6F7C29A1CB66 /* SwipeCard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCard.swift; path = Sources/Shuffle/SwipeCard/SwipeCard.swift; sourceTree = "<group>"; };
+		DB6FAEA0E73BD817B930A74E4488E4E0 /* CBFlashyTabBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBFlashyTabBar.swift; path = CBFlashyTabBarController/Classes/CBFlashyTabBar.swift; sourceTree = "<group>"; };
+		DDCDE875F2C72737FF6133B189E9FECF /* SwipeCardDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCardDelegate.swift; path = Sources/Shuffle/SwipeCard/SwipeCardDelegate.swift; sourceTree = "<group>"; };
+		DF3284969783382BB6526D5A21812BBC /* Pods-TaxAppeal-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaxAppeal-umbrella.h"; sourceTree = "<group>"; };
+		DF98912C7F3CD6BDF2F54229E98AAD7F /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Sources/Shuffle/Animator.swift; sourceTree = "<group>"; };
+		E803422B15C00F3EAA1B8B880FFB8FD7 /* Pods-TaxAppealTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaxAppealTests-umbrella.h"; sourceTree = "<group>"; };
+		EA26D0B8D0CA011068CA429896C06AF7 /* Pods-TaxAppeal-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaxAppeal-frameworks.sh"; sourceTree = "<group>"; };
+		EA3F16A0D08A27AFDC2EA1EF43A96E13 /* SwipeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeView.swift; path = Sources/Shuffle/SwipeCard/SwipeView.swift; sourceTree = "<group>"; };
+		EF6D82A590C3AFFDB84FB22D5172CC1B /* Shuffle_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Shuffle_iOS.framework; path = "Shuffle-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F042C87D58E484A64353E723DE998FE2 /* CBFlashyTabBarController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CBFlashyTabBarController.modulemap; sourceTree = "<group>"; };
+		F6D4179F0267DFD0241FA9287772162E /* Pods-TaxAppeal-TaxAppealUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaxAppeal-TaxAppealUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FFB262F97853880850924D1C6E6A9FA3 /* Shuffle-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Shuffle-iOS.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10F1B98ABADAB81B5C490B6C1086D959 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37B2EDA9F1A4698B2EB3238AB40DCDB3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28D60A0166B28349E491775D6E755683 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB1F1F793D3AAA24E22085772551491 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEE1D632B16A9ACCFF58495438976F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D9064B44905FE30B8B5116540C0E78 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C27090E7402EF87CF5C3C5F08BAE0DD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8570C5AD12CCD9BC36C5D84CACBCC5C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEB6A03E9F2FA27DD9EB894C1DEEBB09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE5D9A2D84FEF8C5F0E944A91FC049A2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37AA53357F6439771DE1F0C9B7415535 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F042C87D58E484A64353E723DE998FE2 /* CBFlashyTabBarController.modulemap */,
+				34B9BBE7C1A83738EB3F188304ABC7F8 /* CBFlashyTabBarController.xcconfig */,
+				4C2BA61728D333563065DDEF0C39475F /* CBFlashyTabBarController-dummy.m */,
+				4EE67F0C685FE01A16E4F467F5BC59F5 /* CBFlashyTabBarController-Info.plist */,
+				5F71CFC10421E98D4C0148C67377C059 /* CBFlashyTabBarController-prefix.pch */,
+				D1EC2DFADE5780BE2418CE2C9D91758F /* CBFlashyTabBarController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CBFlashyTabBarController";
+			sourceTree = "<group>";
+		};
+		3BA4A7A74B9E6FAEBC07432D9DB95563 /* Shuffle-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DF98912C7F3CD6BDF2F54229E98AAD7F /* Animator.swift */,
+				3296A1BBC4004FE0ECDCCE6889A5F6FA /* Array+Extensions.swift */,
+				D92B839737ED13C4FE806F58F9C5B5FB /* CardAnimationOptions.swift */,
+				4458A3C6767C3672B9A9E319AB3EA4A2 /* CardAnimator.swift */,
+				9797C35AAC5372151659CD0D10462A58 /* CardLayoutProvider.swift */,
+				7F247A627956D2A3782ADCCDBCE90B55 /* CardStackAnimationOptions.swift */,
+				13CF8F3CE345E965B49721A3D43E4587 /* CardStackAnimator.swift */,
+				48F0E4DBA0034A4429918D681372C913 /* CardStackLayoutProvider.swift */,
+				6BE635FF8C3BF6EE12520B1F88E1E230 /* CardStackState.swift */,
+				D471C0D835003641F60EEF35D2BE5FAD /* CardStackTransformProvider.swift */,
+				6D37BEC8B88556C64FA169F0E263CB77 /* CardTransformProvider.swift */,
+				5FFB0E00729E92AC5F992C06586E8BD4 /* CGPoint+Extensions.swift */,
+				5F830430AE149E1AC0BBB3CB16E6CBD1 /* CGVector+Extensions.swift */,
+				90F04FA411F93116AF1357A256D7E94C /* Shuffle.h */,
+				DAAB068280645D44FF8F6F7C29A1CB66 /* SwipeCard.swift */,
+				DDCDE875F2C72737FF6133B189E9FECF /* SwipeCardDelegate.swift */,
+				D3D59CB6DE2EF5E0CCBCCA25FDC3BE18 /* SwipeCardStack.swift */,
+				921595A3D780AB8B3471F7BDA0A16B45 /* SwipeCardStackDataSource.swift */,
+				6D08F5EE5CA765B685DB884D2B74B6B1 /* SwipeCardStackDelegate.swift */,
+				256C2A3F367AB3FE84974C8C469B293B /* SwipeDirection.swift */,
+				EA3F16A0D08A27AFDC2EA1EF43A96E13 /* SwipeView.swift */,
+				452C6E6D78D35EDF3F2620332CB24892 /* UIView+Extensions.swift */,
+				F69B1E911B5CEC1A35DDC656D0834025 /* Support Files */,
+			);
+			name = "Shuffle-iOS";
+			path = "Shuffle-iOS";
+			sourceTree = "<group>";
+		};
+		4C78644F0656D751C58DABD33AEB4369 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9AFB20311FB3517E4261042BEC8DB19 /* Pods-TaxAppeal */,
+				7ACAE5A727E7EE60C75886B992B5E3E2 /* Pods-TaxAppeal-TaxAppealUITests */,
+				C27BD3A79C4BAAE380E20DA3947D5B94 /* Pods-TaxAppealTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7675BDFCF03D332EEB27A979FE30B869 /* CBFlashyTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				DB6FAEA0E73BD817B930A74E4488E4E0 /* CBFlashyTabBar.swift */,
+				24594387476161DCD54415FFCBDB72C4 /* CBFlashyTabBarController.swift */,
+				C6C4D69419893A36CFAA36E9F574FD31 /* CBTabBarButton.swift */,
+				60F13CFE26E15D022135D41AEDD963DB /* CBTabItemAnimation.swift */,
+				351E6DD490F6AA523F8A692B5CB5BB6A /* CBTabItemBasicAnimation.swift */,
+				CADDBDE79F278B352DADA8B19D2BB84D /* CBTabItemDeselectAnimation.swift */,
+				C39C0A8214D5CB0FBD25AF09917FEABF /* CBTabItemSelectAnimation.swift */,
+				37AA53357F6439771DE1F0C9B7415535 /* Support Files */,
+			);
+			name = CBFlashyTabBarController;
+			path = CBFlashyTabBarController;
+			sourceTree = "<group>";
+		};
+		7ACAE5A727E7EE60C75886B992B5E3E2 /* Pods-TaxAppeal-TaxAppealUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D3F04B8FEA97491F35265F8BC58450EB /* Pods-TaxAppeal-TaxAppealUITests.modulemap */,
+				12C5C42FA11F3B8955EE3DB5DA2EEBA7 /* Pods-TaxAppeal-TaxAppealUITests-acknowledgements.markdown */,
+				62BB8CCBAE8C76420203CFDD1E3105EA /* Pods-TaxAppeal-TaxAppealUITests-acknowledgements.plist */,
+				42B3C22FA36A1DF4D840E4367A8361FD /* Pods-TaxAppeal-TaxAppealUITests-dummy.m */,
+				6DB158EB3B6618D2D2AD9AA34D29ED5E /* Pods-TaxAppeal-TaxAppealUITests-frameworks.sh */,
+				1084A490470FBF219389FC8396F69510 /* Pods-TaxAppeal-TaxAppealUITests-Info.plist */,
+				7B732B776D02EC375CB72BD361A8D4E7 /* Pods-TaxAppeal-TaxAppealUITests-umbrella.h */,
+				41D71F64EE832B9FF6A0F564C5BEE80B /* Pods-TaxAppeal-TaxAppealUITests.debug.xcconfig */,
+				F6D4179F0267DFD0241FA9287772162E /* Pods-TaxAppeal-TaxAppealUITests.release.xcconfig */,
+			);
+			name = "Pods-TaxAppeal-TaxAppealUITests";
+			path = "Target Support Files/Pods-TaxAppeal-TaxAppealUITests";
+			sourceTree = "<group>";
+		};
+		9B525E2F18288A44B893694A0848182D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7675BDFCF03D332EEB27A979FE30B869 /* CBFlashyTabBarController */,
+				3BA4A7A74B9E6FAEBC07432D9DB95563 /* Shuffle-iOS */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B9AFB20311FB3517E4261042BEC8DB19 /* Pods-TaxAppeal */ = {
+			isa = PBXGroup;
+			children = (
+				07AFBA63C86EF52DE84CC98B53640985 /* Pods-TaxAppeal.modulemap */,
+				A27AA04875A39B1EF55930A0799FD328 /* Pods-TaxAppeal-acknowledgements.markdown */,
+				CD3EE4FA304AF79E782A53A31CD14367 /* Pods-TaxAppeal-acknowledgements.plist */,
+				475847001EFCF871853B27E65A23B963 /* Pods-TaxAppeal-dummy.m */,
+				EA26D0B8D0CA011068CA429896C06AF7 /* Pods-TaxAppeal-frameworks.sh */,
+				3B0ECE3B56DBB107A307DC9FF0280A7E /* Pods-TaxAppeal-Info.plist */,
+				DF3284969783382BB6526D5A21812BBC /* Pods-TaxAppeal-umbrella.h */,
+				9CF2FD06CDB6745916001C1580CF4A88 /* Pods-TaxAppeal.debug.xcconfig */,
+				D1EFF1B3F8D42933E5BE51E16890F0F3 /* Pods-TaxAppeal.release.xcconfig */,
+			);
+			name = "Pods-TaxAppeal";
+			path = "Target Support Files/Pods-TaxAppeal";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C27BD3A79C4BAAE380E20DA3947D5B94 /* Pods-TaxAppealTests */ = {
+			isa = PBXGroup;
+			children = (
+				9900F40D8650D412D244426CF6620465 /* Pods-TaxAppealTests.modulemap */,
+				6C5304F659DB54816C18A64C6D092443 /* Pods-TaxAppealTests-acknowledgements.markdown */,
+				1914EB32CB3199A2981D57A62E578A7B /* Pods-TaxAppealTests-acknowledgements.plist */,
+				0E7F6C8C43B00E4A87286FE4D373B9DF /* Pods-TaxAppealTests-dummy.m */,
+				8C2420142B48759B759A2010B40E986A /* Pods-TaxAppealTests-Info.plist */,
+				E803422B15C00F3EAA1B8B880FFB8FD7 /* Pods-TaxAppealTests-umbrella.h */,
+				604534D98930CB7C705C4B27BD0F04F6 /* Pods-TaxAppealTests.debug.xcconfig */,
+				78F9B703B983F54253CA757F2B62BE2F /* Pods-TaxAppealTests.release.xcconfig */,
+			);
+			name = "Pods-TaxAppealTests";
+			path = "Target Support Files/Pods-TaxAppealTests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				9B525E2F18288A44B893694A0848182D /* Pods */,
+				D57A35275D44D3A3CE9DE76FEC069743 /* Products */,
+				4C78644F0656D751C58DABD33AEB4369 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D57A35275D44D3A3CE9DE76FEC069743 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07D4E958BAD766CBA1D48DEB63D524C9 /* CBFlashyTabBarController.framework */,
+				49215D45126E7AFFA0FA00B3CD1C6C91 /* Pods_TaxAppeal.framework */,
+				1717AA1C0873587726EC30183B49A9B3 /* Pods_TaxAppeal_TaxAppealUITests.framework */,
+				29F4913D7C9D6B56FA98AE3C06C97808 /* Pods_TaxAppealTests.framework */,
+				EF6D82A590C3AFFDB84FB22D5172CC1B /* Shuffle_iOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F69B1E911B5CEC1A35DDC656D0834025 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0DFE6751281AB97080D33D549BFF5583 /* Shuffle-iOS.modulemap */,
+				FFB262F97853880850924D1C6E6A9FA3 /* Shuffle-iOS.xcconfig */,
+				C6DFEF925A3B67E94B77B301930B47BA /* Shuffle-iOS-dummy.m */,
+				113FBEDC0BE924ECE60F19A1F2FCF092 /* Shuffle-iOS-Info.plist */,
+				60C84867715B6E77C6ABD49A29EA9D6E /* Shuffle-iOS-prefix.pch */,
+				2B7E52B3C0A58DB02ADF2E369597DCCE /* Shuffle-iOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Shuffle-iOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0A4AB59D0031797A72271F8F29ADE2AA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1F107B5C0C20879940DA7F0D76B57D /* Shuffle-iOS-umbrella.h in Headers */,
+				24639D359C3BE20FC9229F0D369101EA /* Shuffle.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BF6520F13989F9EB97767C291CEB991 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFAE6534565BFBC958343046F90149A6 /* Pods-TaxAppeal-TaxAppealUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62F1978C0B37B6CF768BDE43DCEC1CA1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DCBE3FD9516343EC2F88E21C98F6545 /* CBFlashyTabBarController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE6210E8D5455B7280BE051735896116 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8605378E763C15F5BFA833C339CC4216 /* Pods-TaxAppealTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F91ABAFC75E8261228984EC29B777D42 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3305506A76E6145173C8730610AFF31B /* Pods-TaxAppeal-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		105961A83B30ED92F56A3BA4F6E3DDAB /* Pods-TaxAppeal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEE249B19651B6272B78718E5F3A785B /* Build configuration list for PBXNativeTarget "Pods-TaxAppeal" */;
+			buildPhases = (
+				F91ABAFC75E8261228984EC29B777D42 /* Headers */,
+				7A003A2659E52F1692B40F8FD2503831 /* Sources */,
+				FEB6A03E9F2FA27DD9EB894C1DEEBB09 /* Frameworks */,
+				9963B10BCC7EAF0E9DC82B7E58933B33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68623FE9FF1675D1E13F4CC11F2BE741 /* PBXTargetDependency */,
+				9FAB33E2E0C2DE779F7B70067D0FD927 /* PBXTargetDependency */,
+			);
+			name = "Pods-TaxAppeal";
+			productName = "Pods-TaxAppeal";
+			productReference = 49215D45126E7AFFA0FA00B3CD1C6C91 /* Pods_TaxAppeal.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4973EB66D60430289F7983602156F7E2 /* Pods-TaxAppealTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80C86A5097BD3BE965319E40E44804BC /* Build configuration list for PBXNativeTarget "Pods-TaxAppealTests" */;
+			buildPhases = (
+				EE6210E8D5455B7280BE051735896116 /* Headers */,
+				2C43A1C7E592258CED31E878E3537295 /* Sources */,
+				C27090E7402EF87CF5C3C5F08BAE0DD6 /* Frameworks */,
+				2AAA18CC702507F33616CF2EAEAE57E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23D32CFE63FA44F17DDE926116DA7928 /* PBXTargetDependency */,
+			);
+			name = "Pods-TaxAppealTests";
+			productName = "Pods-TaxAppealTests";
+			productReference = 29F4913D7C9D6B56FA98AE3C06C97808 /* Pods_TaxAppealTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5737872A76EFCB2A97F445D9434307C7 /* CBFlashyTabBarController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4EA1075817653C75969BB78FDE8A3E2 /* Build configuration list for PBXNativeTarget "CBFlashyTabBarController" */;
+			buildPhases = (
+				62F1978C0B37B6CF768BDE43DCEC1CA1 /* Headers */,
+				2C7B8389C126323DF24AC36765366A63 /* Sources */,
+				3BEE1D632B16A9ACCFF58495438976F8 /* Frameworks */,
+				79005B9247B9C53EC894D5771438BAC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CBFlashyTabBarController;
+			productName = CBFlashyTabBarController;
+			productReference = 07D4E958BAD766CBA1D48DEB63D524C9 /* CBFlashyTabBarController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6CE4608D13EB4E75FE6B40D38210294E /* Shuffle-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF7521CB0CDE32702A8BCC7FB45DBA25 /* Build configuration list for PBXNativeTarget "Shuffle-iOS" */;
+			buildPhases = (
+				0A4AB59D0031797A72271F8F29ADE2AA /* Headers */,
+				5056814C5288F21EFF2A11945BA74BCE /* Sources */,
+				10F1B98ABADAB81B5C490B6C1086D959 /* Frameworks */,
+				FF82F5FA1113C4E96E9B6AB1EF3E7B28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Shuffle-iOS";
+			productName = "Shuffle-iOS";
+			productReference = EF6D82A590C3AFFDB84FB22D5172CC1B /* Shuffle_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AFD7DD018D409700EC0CBED27C29DF00 /* Pods-TaxAppeal-TaxAppealUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0448964CF27826D70BD5D8BC1C39F9DF /* Build configuration list for PBXNativeTarget "Pods-TaxAppeal-TaxAppealUITests" */;
+			buildPhases = (
+				4BF6520F13989F9EB97767C291CEB991 /* Headers */,
+				4AC290CAC16DBB4550A37F6C4C0C81A6 /* Sources */,
+				28D60A0166B28349E491775D6E755683 /* Frameworks */,
+				5EBD6AA95FD44A4D1EA580E4ABC08732 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71EB565B6C1F3BC1C92ADA2E2536C1E4 /* PBXTargetDependency */,
+				8EBE009F5D92B8A14B38CD07CDE3A835 /* PBXTargetDependency */,
+			);
+			name = "Pods-TaxAppeal-TaxAppealUITests";
+			productName = "Pods-TaxAppeal-TaxAppealUITests";
+			productReference = 1717AA1C0873587726EC30183B49A9B3 /* Pods_TaxAppeal_TaxAppealUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = D57A35275D44D3A3CE9DE76FEC069743 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5737872A76EFCB2A97F445D9434307C7 /* CBFlashyTabBarController */,
+				105961A83B30ED92F56A3BA4F6E3DDAB /* Pods-TaxAppeal */,
+				AFD7DD018D409700EC0CBED27C29DF00 /* Pods-TaxAppeal-TaxAppealUITests */,
+				4973EB66D60430289F7983602156F7E2 /* Pods-TaxAppealTests */,
+				6CE4608D13EB4E75FE6B40D38210294E /* Shuffle-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2AAA18CC702507F33616CF2EAEAE57E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EBD6AA95FD44A4D1EA580E4ABC08732 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79005B9247B9C53EC894D5771438BAC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9963B10BCC7EAF0E9DC82B7E58933B33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF82F5FA1113C4E96E9B6AB1EF3E7B28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C43A1C7E592258CED31E878E3537295 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4826AE8E26C4E26229F8B7FF448C0974 /* Pods-TaxAppealTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C7B8389C126323DF24AC36765366A63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8986CC7B2C9C15F1917E798117F644DC /* CBFlashyTabBar.swift in Sources */,
+				E82E20D4B21D30CC8A06C5CF540FDCF8 /* CBFlashyTabBarController-dummy.m in Sources */,
+				B62CE540AEC6C3C0CCEBC83B4EC04514 /* CBFlashyTabBarController.swift in Sources */,
+				5A15123627499A1087BD267801BA5BFC /* CBTabBarButton.swift in Sources */,
+				87E32330C480E15EA28EE9F7D772696F /* CBTabItemAnimation.swift in Sources */,
+				0BA46128F8D7479CCD09B2E88C109DB5 /* CBTabItemBasicAnimation.swift in Sources */,
+				92492D08B5FF542DDD2DF65BBEC64727 /* CBTabItemDeselectAnimation.swift in Sources */,
+				A211362205D10B7E1EB641AC03BB97EF /* CBTabItemSelectAnimation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AC290CAC16DBB4550A37F6C4C0C81A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD0FEA95A14C9F9F07ACD0771E49144A /* Pods-TaxAppeal-TaxAppealUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5056814C5288F21EFF2A11945BA74BCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9C16D0FDFD42D6811500C92EFF495E6 /* Animator.swift in Sources */,
+				453906E3DEEE16880E626305EE378DFC /* Array+Extensions.swift in Sources */,
+				A106248C291BD9B467B26FC9CFD80027 /* CardAnimationOptions.swift in Sources */,
+				B6C1CB03293EC15F429446B21B6B6581 /* CardAnimator.swift in Sources */,
+				2D54BD2C676D62BA5B2EF4994E542697 /* CardLayoutProvider.swift in Sources */,
+				ED190DACDCD9926C4424E075CA38A82F /* CardStackAnimationOptions.swift in Sources */,
+				1D308EC63708D0BD0D9DE9C421141BAF /* CardStackAnimator.swift in Sources */,
+				2514CB1BBB432A08138E92441249C63D /* CardStackLayoutProvider.swift in Sources */,
+				F73A3E0DF6BAA2EB644207FFDCD4D591 /* CardStackState.swift in Sources */,
+				0340FDF968915D4D90708AFBE83340B1 /* CardStackTransformProvider.swift in Sources */,
+				ADA17D1D0853A2EAEB9EF68EFC9C3BA1 /* CardTransformProvider.swift in Sources */,
+				1FEF43CF5C763B58B8B196EE003944AE /* CGPoint+Extensions.swift in Sources */,
+				5A711F8CA73995AF26A582B765A22675 /* CGVector+Extensions.swift in Sources */,
+				CBE763E372665794010800F08058D90E /* Shuffle-iOS-dummy.m in Sources */,
+				7E4FE6B013EB29778FB80560F10951E5 /* SwipeCard.swift in Sources */,
+				E6DD27ABFD02F10A028AF04F660C6E8B /* SwipeCardDelegate.swift in Sources */,
+				054C8AF7CA3B5278580B2F68F057A4C3 /* SwipeCardStack.swift in Sources */,
+				42C7D007F7A71B750DB49B79B246CA67 /* SwipeCardStackDataSource.swift in Sources */,
+				00B51D70276B9521382501FE14BD1CFD /* SwipeCardStackDelegate.swift in Sources */,
+				56397D98E4F620971ED1DB5314302FAB /* SwipeDirection.swift in Sources */,
+				7E59F6ABD43700E7AF7760FAD557A76A /* SwipeView.swift in Sources */,
+				C9E842D41797378EC67CE1E35DD07B14 /* UIView+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A003A2659E52F1692B40F8FD2503831 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				768F57AF5C8052D7E1F05525472C5DC6 /* Pods-TaxAppeal-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23D32CFE63FA44F17DDE926116DA7928 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TaxAppeal";
+			target = 105961A83B30ED92F56A3BA4F6E3DDAB /* Pods-TaxAppeal */;
+			targetProxy = 3587A3E3E7DE0C6C2178A44932AC412C /* PBXContainerItemProxy */;
+		};
+		68623FE9FF1675D1E13F4CC11F2BE741 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CBFlashyTabBarController;
+			target = 5737872A76EFCB2A97F445D9434307C7 /* CBFlashyTabBarController */;
+			targetProxy = 7338DD2506579856B0F02707E3830360 /* PBXContainerItemProxy */;
+		};
+		71EB565B6C1F3BC1C92ADA2E2536C1E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CBFlashyTabBarController;
+			target = 5737872A76EFCB2A97F445D9434307C7 /* CBFlashyTabBarController */;
+			targetProxy = 76B09C22D435F9B6D35385B15C93C38A /* PBXContainerItemProxy */;
+		};
+		8EBE009F5D92B8A14B38CD07CDE3A835 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Shuffle-iOS";
+			target = 6CE4608D13EB4E75FE6B40D38210294E /* Shuffle-iOS */;
+			targetProxy = 9F7E25246AD3603476F918C21BBAF41B /* PBXContainerItemProxy */;
+		};
+		9FAB33E2E0C2DE779F7B70067D0FD927 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Shuffle-iOS";
+			target = 6CE4608D13EB4E75FE6B40D38210294E /* Shuffle-iOS */;
+			targetProxy = 13BC20F256BCE069F3DF93BA85343733 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2E871743C58905E5ED2D7C8D56F0CC2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34B9BBE7C1A83738EB3F188304ABC7F8 /* CBFlashyTabBarController.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CBFlashyTabBarController/CBFlashyTabBarController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CBFlashyTabBarController/CBFlashyTabBarController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CBFlashyTabBarController/CBFlashyTabBarController.modulemap";
+				PRODUCT_MODULE_NAME = CBFlashyTabBarController;
+				PRODUCT_NAME = CBFlashyTabBarController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7E6BB3D7F8E73E758D72C3D321E7A084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 604534D98930CB7C705C4B27BD0F04F6 /* Pods-TaxAppealTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TaxAppealTests/Pods-TaxAppealTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaxAppealTests/Pods-TaxAppealTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B36A18E891CABA26D94EC4A689263F13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1EFF1B3F8D42933E5BE51E16890F0F3 /* Pods-TaxAppeal.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TaxAppeal/Pods-TaxAppeal-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaxAppeal/Pods-TaxAppeal.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BC4C6A1374F5FDFB95CBF68F7A48DFA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78F9B703B983F54253CA757F2B62BE2F /* Pods-TaxAppealTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TaxAppealTests/Pods-TaxAppealTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaxAppealTests/Pods-TaxAppealTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C58A10F63ED3A498A56248A8DA981441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6D4179F0267DFD0241FA9287772162E /* Pods-TaxAppeal-TaxAppealUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TaxAppeal-TaxAppealUITests/Pods-TaxAppeal-TaxAppealUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaxAppeal-TaxAppealUITests/Pods-TaxAppeal-TaxAppealUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C69AB1A1530CC7E5E3FCB0F3B89A3B63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFB262F97853880850924D1C6E6A9FA3 /* Shuffle-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Shuffle-iOS/Shuffle-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Shuffle-iOS/Shuffle-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Shuffle-iOS/Shuffle-iOS.modulemap";
+				PRODUCT_MODULE_NAME = Shuffle_iOS;
+				PRODUCT_NAME = Shuffle_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E1BAEC139171F49A71CC49CF2B410A32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41D71F64EE832B9FF6A0F564C5BEE80B /* Pods-TaxAppeal-TaxAppealUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TaxAppeal-TaxAppealUITests/Pods-TaxAppeal-TaxAppealUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaxAppeal-TaxAppealUITests/Pods-TaxAppeal-TaxAppealUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E9D5535C4C21916CEF5171B1C0B41797 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34B9BBE7C1A83738EB3F188304ABC7F8 /* CBFlashyTabBarController.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CBFlashyTabBarController/CBFlashyTabBarController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CBFlashyTabBarController/CBFlashyTabBarController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CBFlashyTabBarController/CBFlashyTabBarController.modulemap";
+				PRODUCT_MODULE_NAME = CBFlashyTabBarController;
+				PRODUCT_NAME = CBFlashyTabBarController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F05C51FC9F658CAEDC6354F575A97C67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CF2FD06CDB6745916001C1580CF4A88 /* Pods-TaxAppeal.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TaxAppeal/Pods-TaxAppeal-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaxAppeal/Pods-TaxAppeal.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FEB6C93A9DD066F030DB624327F5799D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFB262F97853880850924D1C6E6A9FA3 /* Shuffle-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Shuffle-iOS/Shuffle-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Shuffle-iOS/Shuffle-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Shuffle-iOS/Shuffle-iOS.modulemap";
+				PRODUCT_MODULE_NAME = Shuffle_iOS;
+				PRODUCT_NAME = Shuffle_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0448964CF27826D70BD5D8BC1C39F9DF /* Build configuration list for PBXNativeTarget "Pods-TaxAppeal-TaxAppealUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1BAEC139171F49A71CC49CF2B410A32 /* Debug */,
+				C58A10F63ED3A498A56248A8DA981441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */,
+				ECB437504DF805BD96CAABF97400B526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80C86A5097BD3BE965319E40E44804BC /* Build configuration list for PBXNativeTarget "Pods-TaxAppealTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E6BB3D7F8E73E758D72C3D321E7A084 /* Debug */,
+				BC4C6A1374F5FDFB95CBF68F7A48DFA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4EA1075817653C75969BB78FDE8A3E2 /* Build configuration list for PBXNativeTarget "CBFlashyTabBarController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E871743C58905E5ED2D7C8D56F0CC2D /* Debug */,
+				E9D5535C4C21916CEF5171B1C0B41797 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE249B19651B6272B78718E5F3A785B /* Build configuration list for PBXNativeTarget "Pods-TaxAppeal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F05C51FC9F658CAEDC6354F575A97C67 /* Debug */,
+				B36A18E891CABA26D94EC4A689263F13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF7521CB0CDE32702A8BCC7FB45DBA25 /* Build configuration list for PBXNativeTarget "Shuffle-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C69AB1A1530CC7E5E3FCB0F3B89A3B63 /* Debug */,
+				FEB6C93A9DD066F030DB624327F5799D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

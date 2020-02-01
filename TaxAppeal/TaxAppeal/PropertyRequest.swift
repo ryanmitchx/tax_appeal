@@ -8,26 +8,40 @@
 
 import Foundation
 
-struct PropertyRequest {
-    let requestUrl: URL
+class PropertyRequest: Decodable {
+    var requestUrl: String = "https://data.lacounty.gov/resource/mk7y-hq5p.json?"
     
-    init() {
-        self.requestUrl = URL(string: "https://data.lacounty.gov/resource/mk7y-hq5p.json?situszip=90007")!
-        
-    }
-    
-    func getProperties(completionHandler: @escaping(Result<[Property], PropertyError>) -> Void)
+    func getDetails(zip: String, completionHandler: @escaping(Result<[Property], PropertyError>) -> Void)
     {
-        URLSession.shared.dataTask(with: self.requestUrl) { (data, response, error) in
+        let requestUrl1 = requestUrl + "situszip5=" + zip;
+        print(requestUrl1)
+        URLSession.shared.dataTask(with: URL(string: requestUrl1)!) { (data, response, error) in
             guard let data = data else {
                 completionHandler(.failure(.dataUnavailable))
                 return
             }
             do {
-                print("hi")
-                let results = try JSONDecoder().decode(Results.self, from: data)
+                let results = try JSONDecoder().decode(PropertyResponse.self, from: data)
                 completionHandler(.success(results.properties))
             }catch {
+                completionHandler(.failure(.cannotProcessData))
+            }
+        }.resume()
+    }
+    
+    func getProperties(myHouse: Property, completionHandler: @escaping(Result<[Property], PropertyError>) -> Void)
+    {
+        let requestUrl2 = requestUrl + "situszip5=" + myHouse.situszip5 + "&bedrooms=" + myHouse.bedrooms + "&bathrooms" + myHouse.bathrooms
+        URLSession.shared.dataTask(with: URL(string: requestUrl2)!) { (data, response, error) in
+            guard let data = data else {
+                completionHandler(.failure(.dataUnavailable))
+                return
+            }
+            do {
+                let results = try JSONDecoder().decode(PropertyResponse.self, from: data)
+                completionHandler(.success(results.properties))
+            }catch {
+                print("here!")
                 completionHandler(.failure(.cannotProcessData))
             }
         }.resume()
