@@ -8,6 +8,7 @@
 
 import UIKit
 import CBFlashyTabBarController
+import KeychainAccess
 
 class TabBarController: UITabBarController {
     
@@ -25,6 +26,7 @@ class TabBarController: UITabBarController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         let neighborhood = HouseViewController()
         neighborhood.tabBarItem = UITabBarItem()
         neighborhood.tabBarItem.title = "Neighborhood"
@@ -41,10 +43,16 @@ class TabBarController: UITabBarController {
         let tbc = CBFlashyTabBarController()
         tbc.viewControllers = [neighborhood, myHome, action]
         tbc.modalPresentationStyle = .fullScreen
+        let keychain = Keychain(service: "com.brs.TaxAppeal")
+        let address = try? keychain.get("address")
         self.present(tbc, animated: false, completion: nil)
+//        print(address)
+        if(address == nil || address == "" ){
+            let evc = WelcomeAddressController()
+            tbc.present(evc, animated: true, completion: nil)
+        }
+        
     }
-    
-    
     
 
     /*

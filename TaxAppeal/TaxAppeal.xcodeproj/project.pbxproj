@@ -28,6 +28,7 @@
 		94A19E7B23E548D9003E3B4C /* TaxAppealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A19E7A23E548D9003E3B4C /* TaxAppealTests.swift */; };
 		94A19E8623E548D9003E3B4C /* TaxAppealUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A19E8523E548D9003E3B4C /* TaxAppealUITests.swift */; };
 		94EA00D223E6984600A0EE13 /* EditHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA00D123E6984600A0EE13 /* EditHomeViewController.swift */; };
+		94EA00D423E6ACFA00A0EE13 /* WelcomeAddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA00D323E6ACFA00A0EE13 /* WelcomeAddressController.swift */; };
 		B7DC21E6D37F555D334344D5 /* Pods_TaxAppeal_TaxAppealUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8B82DEA8525CF1BB413FBC /* Pods_TaxAppeal_TaxAppealUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		94A19E8523E548D9003E3B4C /* TaxAppealUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxAppealUITests.swift; sourceTree = "<group>"; };
 		94A19E8723E548D9003E3B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94EA00D123E6984600A0EE13 /* EditHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHomeViewController.swift; sourceTree = "<group>"; };
+		94EA00D323E6ACFA00A0EE13 /* WelcomeAddressController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeAddressController.swift; sourceTree = "<group>"; };
 		9C943AE6103EE51445810C80 /* Pods-TaxAppeal-TaxAppealUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxAppeal-TaxAppealUITests.release.xcconfig"; path = "Target Support Files/Pods-TaxAppeal-TaxAppealUITests/Pods-TaxAppeal-TaxAppealUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AB36CA69F43CE25CB0CEFBFF /* Pods-TaxAppeal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxAppeal.debug.xcconfig"; path = "Target Support Files/Pods-TaxAppeal/Pods-TaxAppeal.debug.xcconfig"; sourceTree = "<group>"; };
 		AE7D79C0ADF156BBAF94F205 /* Pods-TaxAppealTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxAppealTests.release.xcconfig"; path = "Target Support Files/Pods-TaxAppealTests/Pods-TaxAppealTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				946FFC3923E56B5D002ACF86 /* HouseView.swift */,
 				946FFC4F23E61ED0002ACF86 /* MyHomeViewController.swift */,
 				94EA00D123E6984600A0EE13 /* EditHomeViewController.swift */,
+				94EA00D323E6ACFA00A0EE13 /* WelcomeAddressController.swift */,
 				94A19E6923E548D7003E3B4C /* Main.storyboard */,
 				94A19E6C23E548D9003E3B4C /* Assets.xcassets */,
 				94A19E6E23E548D9003E3B4C /* LaunchScreen.storyboard */,
@@ -461,6 +464,7 @@
 				946FFC3A23E56B5D002ACF86 /* HouseView.swift in Sources */,
 				94A19E6823E548D7003E3B4C /* ActionController.swift in Sources */,
 				946FFC4723E57357002ACF86 /* SampleCard.swift in Sources */,
+				94EA00D423E6ACFA00A0EE13 /* WelcomeAddressController.swift in Sources */,
 				2548EC0C23E61CCE00D4A743 /* PropertyRequest.swift in Sources */,
 				2548EC0E23E61CE400D4A743 /* PropertyResponse.swift in Sources */,
 				94EA00D223E6984600A0EE13 /* EditHomeViewController.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 import KeychainAccess
 import CBFlashyTabBarController
 
-class EditHomeViewController: UIViewController {
+class WelcomeAddressController: UIViewController {
     
     private var setAddressButton: UIButton!
     private var addressTF: UITextField!
@@ -94,11 +94,31 @@ class EditHomeViewController: UIViewController {
                 keychain["zip"] = zip
             }
         }
-        else if sender == doneButton{let tbc = self.presentingViewController as! CBFlashyTabBarController
+        else if sender == doneButton{
+            let tbc = self.presentingViewController as! CBFlashyTabBarController
             let hvc = tbc.viewControllers![0] as! HouseViewController
             hvc.updateCards()
-            let pvc = tbc.viewControllers![1] as! MyHomeViewController
-            pvc.updateView()
+//            let mhc = tbc.viewControllers![1] as! MyHomeViewController
+            let propertyAddress = try? keychain.get("address")
+//            PropertyRequest().getDetailsOfAddress(addressString: propertyAddress ?? "5448%206TH%20AVE%20%20LOS%20ANGELES%20CA%20%2090043"){ result in
+//            switch result {
+//            case .failure(let error):
+//                print(error)
+//            case .success(let properties):
+//                if(properties.count < 1){
+//                    print("there is an error")
+//                }
+//                else{
+//                    let myProperty: Property = properties[0]
+//                    DispatchQueue.main.sync{
+//                        self.keychain["beds"] = myProperty.bedrooms
+//                        self.keychain["baths"] = myProperty.bathrooms
+//                    }
+//                }
+//                }
+//            }
+            
+//            mhc.updateView()
             self.dismiss(animated: true, completion: nil)
         }
     }
@@ -116,7 +136,7 @@ class EditHomeViewController: UIViewController {
     
 }
 
-extension WelcomeAddressController: UITextFieldDelegate{
+extension EditHomeViewController: UITextFieldDelegate{
     
     
 }

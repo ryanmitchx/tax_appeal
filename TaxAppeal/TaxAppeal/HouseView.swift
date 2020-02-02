@@ -48,9 +48,11 @@ class HouseViewController: UIViewController {
         HomeValues.maxValue = 0
         HomeValues.minValue = Int.max
         let userZip = keychain["zip"] ?? "90007"
+        let bathrooms = keychain["baths"] ?? "2"
+        let bedrooms = keychain["beds"] ?? "2"
         print(userZip)
         self.homes = []
-        PropertyRequest().getSimilarHomes(zip: String(userZip) ?? "90007", bedrooms: 2, bathrooms: 2) { result in
+        PropertyRequest().getSimilarHomes(zip: String(userZip), bedrooms: Int(bedrooms) ?? 2, bathrooms: Int(bathrooms) ?? 2) { result in
           switch result {
             case .failure(let error):
                 print(error)

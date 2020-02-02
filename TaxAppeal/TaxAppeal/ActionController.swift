@@ -33,8 +33,8 @@ class ActionController: UIViewController {
         
         //                var example: String = "-How to Appeal the Reassessment? \nWebsites to visit: http://bos.lacounty.gov/Services/Assessment-Appeals\n\n-Online Application\nhttps://lacaab.lacounty.gov/Home.aspx\n\n-Form: http://bos.lacounty.gov/LinkClick.aspx?fileticket=rbWMgcSxraE%3d&portalid=1"
         
-        let attributedString = NSMutableAttributedString(string: "How to Appeal the Reassessment?\nClick Here")
-        attributedString.addAttribute(.link, value: "http://bos.lacounty.gov/Services/Assessment-Appeals", range: NSRange(location: 32, length: 10))
+        let attributedString = NSMutableAttributedString(string: "How to Appeal Your Assessment:\nLA County Appeals Process")
+        attributedString.addAttribute(.link, value: "http://bos.lacounty.gov/Services/Assessment-Appeals", range: NSRange(location: 31, length: 25))
         
         
         

@@ -95,7 +95,7 @@ class MyHomeViewController: UIViewController {
         infoLabel.numberOfLines = 0
         
         let gaugeLabelString = NSMutableAttributedString(string: "Your Assessed Value, Compared:\n", attributes: NSAttributedString.Key.assessValue)
-        gaugeLabelString.append(NSMutableAttributedString(string: "Are you above or below the average", attributes: NSAttributedString.Key.subtitle))
+        gaugeLabelString.append(NSMutableAttributedString(string: "Are you above or below the average?", attributes: NSAttributedString.Key.subtitle))
         gaugeLabel.attributedText = gaugeLabelString
         gaugeLabel.numberOfLines = 0
         
@@ -126,7 +126,7 @@ class MyHomeViewController: UIViewController {
         //        var address: String = "pleasesir"
         
         var propertyAddress = keychain["address"]?.uppercased() ?? "5448%206TH%20AVE%20%20LOS%20ANGELES%20CA%20%2090043"
-        if(propertyAddress == nil || propertyAddress == ""){
+        if(propertyAddress == ""){
             propertyAddress = "5448%206TH%20AVE%20%20LOS%20ANGELES%20CA%20%2090043"
         }
         else{
@@ -146,6 +146,8 @@ class MyHomeViewController: UIViewController {
                 else{
                     let myProperty: Property = properties[0]
                     DispatchQueue.main.sync{
+                        self.keychain["beds"] = myProperty.bedrooms
+                        self.keychain["baths"] = myProperty.bathrooms
                         self.assessedValue = Int(myProperty.nettaxablevalue)!
                         self.attributedText.append(NSMutableAttributedString(string: "\(myProperty.nettaxablevalue).00", attributes: NSAttributedString.Key.assessValue))
                         let paragraphStyle = NSMutableParagraphStyle()
@@ -169,8 +171,9 @@ class MyHomeViewController: UIViewController {
                             }
                         }
                         else{
-                            self.gauge.maxValue = 1
                             self.gauge.rate = 0
+                            self.gauge.maxValue = 1
+                            
                         }
                     }
                 }
@@ -203,17 +206,18 @@ class MyHomeViewController: UIViewController {
     
     func updateView(){
         attributedText = NSMutableAttributedString(string: ("Assessed Value: $"), attributes: NSAttributedString.Key.assessValue)
-        var propertyAddress = keychain["address"]?.uppercased() ?? "5448%206TH%20AVE%20%20LOS%20ANGELES%20CA%20%2090043"
+        var propertyAddress = try? keychain.get("address")
         if(propertyAddress == nil || propertyAddress == ""){
             propertyAddress = "5448%206TH%20AVE%20%20LOS%20ANGELES%20CA%20%2090043"
         }
         else{
-            propertyAddress = propertyAddress.trimmingCharacters(in: .whitespacesAndNewlines)
-            propertyAddress = propertyAddress.replacingOccurrences(of: ",", with: "%20")
-            propertyAddress = propertyAddress.replacingOccurrences(of: " ", with: "%20")
+            propertyAddress = propertyAddress?.uppercased()
+            propertyAddress = propertyAddress?.trimmingCharacters(in: .whitespacesAndNewlines)
+            propertyAddress = propertyAddress?.replacingOccurrences(of: ",", with: "%20")
+            propertyAddress = propertyAddress?.replacingOccurrences(of: " ", with: "%20")
         }
-        print(propertyAddress)
-        PropertyRequest().getDetailsOfAddress(addressString: propertyAddress){ result in
+//        print(propertyAddress)
+        PropertyRequest().getDetailsOfAddress(addressString: propertyAddress ?? "5448%206TH%20AVE%20%20LOS%20ANGELES%20CA%20%2090043"){ result in
             switch result {
             case .failure(let error):
                 print(error)
@@ -224,6 +228,8 @@ class MyHomeViewController: UIViewController {
                 else{
                     let myProperty: Property = properties[0]
                     DispatchQueue.main.sync{
+                        self.keychain["beds"] = myProperty.bedrooms
+                        self.keychain["baths"] = myProperty.bathrooms
                         self.assessedValue = Int(myProperty.nettaxablevalue)!
                         self.attributedText.append(NSMutableAttributedString(string: "\(myProperty.nettaxablevalue).00", attributes: NSAttributedString.Key.assessValue))
                         let paragraphStyle = NSMutableParagraphStyle()
@@ -250,8 +256,8 @@ class MyHomeViewController: UIViewController {
                             }
                         }
                         else{
-                            self.gauge.maxValue = 1
                             self.gauge.rate = 0
+                            self.gauge.maxValue = 1
                         }
                     }
                 }
@@ -320,13 +326,13 @@ class MyHomeViewController: UIViewController {
             minLabel.isHidden = true
         }else{
             minLabel.isHidden = false
-            minLabel.text = String(HouseViewController.HomeValues.minValue)
+            minLabel.text = String("$\(HouseViewController.HomeValues.minValue)")
         }
         if(HouseViewController.HomeValues.maxValue == 0){
             maxLabel.isHidden = true
         }else{
             maxLabel.isHidden = false
-            maxLabel.text = String(HouseViewController.HomeValues.maxValue)
+            maxLabel.text = String("$\(HouseViewController.HomeValues.maxValue)")
         }
         
         
