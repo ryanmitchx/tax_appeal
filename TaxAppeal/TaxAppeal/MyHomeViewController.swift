@@ -141,8 +141,11 @@ class MyHomeViewController: UIViewController {
                     self.infoLabel.attributedText = self.attributedText
                     print(HouseViewController.HomeValues.numHomes)
                     if(HouseViewController.HomeValues.numHomes>1){
-                        let newRate = CGFloat(self.assessedValue-HouseViewController.HomeValues.minValue)
-                        
+                        var newRate = CGFloat(self.assessedValue-HouseViewController.HomeValues.minValue)
+                        if(newRate < 0){
+                            HouseViewController.HomeValues.minValue = self.assessedValue
+                            newRate = 0
+                        }
                         self.gauge.animateRate(0.5, newValue: newRate) { (finished) in
                             print("Gauge animation completed !")
                         }
@@ -254,8 +257,12 @@ class MyHomeViewController: UIViewController {
         print(HouseViewController.HomeValues.numHomes)
         if(HouseViewController.HomeValues.numHomes>1){
             gauge.maxValue = CGFloat(HouseViewController.HomeValues.maxValue-HouseViewController.HomeValues.minValue)
-            let newRate = CGFloat(self.assessedValue-HouseViewController.HomeValues.minValue)
+            var newRate = CGFloat(self.assessedValue-HouseViewController.HomeValues.minValue)
             print("The new rate is1: \(newRate)")
+            if(newRate < 0){
+                HouseViewController.HomeValues.minValue = self.assessedValue
+                newRate = 0
+            }
             self.gauge.animateRate(0.5, newValue: newRate) { (finished) in
                 print("Gauge animation completed !")
             }
