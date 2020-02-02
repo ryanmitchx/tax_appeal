@@ -23,7 +23,7 @@ class PropertyRequest: Decodable {
                 let results = try JSONDecoder().decode(PropertyResponse.self, from: data)
                 completionHandler(.success(results.properties))
             }catch {
-//                completionHandler(.failure(.cannotProcessData))
+                completionHandler(.failure(.cannotProcessData))
             }
         }.resume()
     }
@@ -40,7 +40,7 @@ class PropertyRequest: Decodable {
                 let results = try JSONDecoder().decode(PropertyResponse.self, from: data)
                 completionHandler(.success(results.properties))
             }catch {
-//                completionHandler(.failure(.cannotProcessData))
+                completionHandler(.failure(.cannotProcessData))
             }
         }.resume()
     }

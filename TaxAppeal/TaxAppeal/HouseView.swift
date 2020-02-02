@@ -12,8 +12,8 @@ class HouseViewController: UIViewController {
     
 
     struct HomeValues{
-        static var totalValue: Int = 400000
-        static var numHomes: Int = 2
+        static var totalValue: Int = 0
+        static var numHomes: Int = 0
         static var maxValue: Int = 0
         static var minValue: Int = Int.max
     }
@@ -28,7 +28,6 @@ class HouseViewController: UIViewController {
                 let myProperty: Property = properties[0]
                 DispatchQueue.main.async{
                     for prop in properties{
-                        print(prop)
                         let newHome: Home = Home(address: "\(prop.situshouseno) \(prop.situsstreet.upperCamelCase)", beds: Int(prop.bedrooms) ?? 0, baths: Int(prop.bathrooms) ?? 0, propertyValue: Int(prop.nettaxablevalue) ?? 0, image: "https://specials-images.forbesimg.com/imageserve/1026205392/960x0.jpg")
                         self.homes.append(newHome)
                     }

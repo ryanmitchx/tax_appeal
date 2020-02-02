@@ -34,12 +34,12 @@ class TabBarController: UITabBarController {
         myHome.tabBarItem.title = "My Home"
         myHome.tabBarItem.image = UIImage(systemName: "person.circle")
 //        myHome.tabBarItem.image = UIImage(named: "my-house") as UIImage?
-        let settings = ViewController()
-        settings.tabBarItem = UITabBarItem()
-        settings.tabBarItem.title = "Settings"
-        settings.tabBarItem.image = UIImage(systemName: "gear")
+        let action = ActionController()
+        action.tabBarItem = UITabBarItem()
+        action.tabBarItem.title = "Take Action"
+        action.tabBarItem.image = UIImage(systemName: "wrench")
         let tbc = CBFlashyTabBarController()
-        tbc.viewControllers = [neighborhood, myHome, settings]
+        tbc.viewControllers = [neighborhood, myHome, action]
         tbc.modalPresentationStyle = .fullScreen
         self.present(tbc, animated: false, completion: nil)
     }

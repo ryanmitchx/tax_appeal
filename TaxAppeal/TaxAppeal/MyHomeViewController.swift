@@ -18,6 +18,9 @@ class MyHomeViewController: UIViewController {
     private var infoLabel = UILabel.init()
     private var addressLabel = UILabel.init()
     private var avgValueLabel = UILabel.init()
+    private var minLabel = UILabel.init()
+    private var maxLabel = UILabel.init()
+    private var assessedValue: Int = 0
     private var keychain: Keychain!
     private let attributedText = NSMutableAttributedString(string: ("Assessed Value: $"), attributes: NSAttributedString.Key.assessValue)
     private let imageView: UIImageView = {
@@ -32,7 +35,7 @@ class MyHomeViewController: UIViewController {
         
     }()
     private let gauge = Gauge()
-
+    
     private let gradientLayer: CAGradientLayer = {
         let gradient = CAGradientLayer()
         gradient.colors = [UIColor.black.withAlphaComponent(0.8).cgColor,
@@ -83,10 +86,10 @@ class MyHomeViewController: UIViewController {
         self.addressTF.delegate = self
         view.addSubview(addressTF)
         
-        avgValueLabel.text = String(HouseViewController.HomeValues.totalValue / HouseViewController.HomeValues.numHomes)
-        avgValueLabel.frame = CGRect(x: 50, y: 115, width: 300, height: 40.0)
+        //        avgValueLabel.text = String(HouseViewController.HomeValues.totalValue / HouseViewController.HomeValues.numHomes)
+        //        avgValueLabel.frame = CGRect(x: 50, y: 115, width: 300, height: 40.0)
         
-        view.addSubview(avgValueLabel)
+        //        view.addSubview(avgValueLabel)
         
         imageView.image = UIImage()
         
@@ -111,22 +114,22 @@ class MyHomeViewController: UIViewController {
         infoLabel.numberOfLines = 0
         
         addressLabel.translatesAutoresizingMaskIntoConstraints = false
+        minLabel.translatesAutoresizingMaskIntoConstraints = false
+        maxLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        
-        gauge.type = .right
-        gauge.colorsArray = [UIColor.red, UIColor.orange, UIColor.yellow ,UIColor.green]
-        gauge.rate = 2
         gauge.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(gauge)
         
-//        var address: String = "pleasesir"
+        
+        //        var address: String = "pleasesir"
+        
         PropertyRequest().getDetailsOfAddress(addressString: "5448%206TH%20AVE%20%20LOS%20ANGELES%20CA%20%2090043"){ result in
-          switch result {
+            switch result {
             case .failure(let error):
                 print(error)
             case .success(let properties):
                 let myProperty: Property = properties[0]
-                DispatchQueue.main.async{
+                DispatchQueue.main.sync{
+                    self.assessedValue = Int(myProperty.nettaxablevalue)!
                     self.attributedText.append(NSMutableAttributedString(string: "\(myProperty.nettaxablevalue).00", attributes: NSAttributedString.Key.assessValue))
                     let paragraphStyle = NSMutableParagraphStyle()
                     paragraphStyle.lineSpacing = 1.5
@@ -136,17 +139,41 @@ class MyHomeViewController: UIViewController {
                     let attribAddr = NSMutableAttributedString(string: "\(myProperty.situshouseno) \(myProperty.situsstreet.upperCamelCase), \(myProperty.taxratearea_city.upperCamelCase), CA \(myProperty.situszip5)", attributes: NSAttributedString.Key.addr)
                     self.addressLabel.attributedText = attribAddr
                     self.infoLabel.attributedText = self.attributedText
+                    print(HouseViewController.HomeValues.numHomes)
+                    if(HouseViewController.HomeValues.numHomes>1){
+                        let newRate = CGFloat(self.assessedValue-HouseViewController.HomeValues.minValue)
+                        
+                        self.gauge.animateRate(0.5, newValue: newRate) { (finished) in
+                            print("Gauge animation completed !")
+                        }
+                    }
+                    else{
+                        self.gauge.maxValue = CGFloat(self.assessedValue)
+                        self.gauge.rate = 0
+                    }
                 }
-//                address = myProperty.propertylocation.upperCamelCase
+                //                address = myProperty.propertylocation.upperCamelCase
             }
         }
         
         view.addSubview(addressLabel)
         infoLabel.attributedText = attributedText
         
-        view.addSubview(infoLabel)
-        constraintsInit()
+        minLabel.textAlignment = .center
+        maxLabel.textAlignment = .center
         
+        view.addSubview(infoLabel)
+        view.addSubview(minLabel)
+        view.addSubview(maxLabel)
+        
+        gauge.type = .left
+        gauge.rotate = 5
+        gauge.lineWidth = 25
+        gauge.alpha = 1
+        gauge.colorsArray = [UIColor.green, UIColor.yellow, UIColor.orange, UIColor.red]
+        view.addSubview(gauge)
+        
+        constraintsInit()
     }
     
     func constraintsInit(){
@@ -159,16 +186,29 @@ class MyHomeViewController: UIViewController {
             addressTF.topAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: 150),
             addressTF.leadingAnchor.constraint(equalTo: view.readableContentGuide.leadingAnchor, constant: 20),
             addressTF.trailingAnchor.constraint(equalTo: view.readableContentGuide.trailingAnchor, constant: -20),
-
+            
             infoLabel.topAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: 20),
             infoLabel.leadingAnchor.constraint(equalTo: view.readableContentGuide.leadingAnchor, constant: 15),
             
             addressLabel.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: -10),
             addressLabel.leadingAnchor.constraint(equalTo: view.readableContentGuide.leadingAnchor, constant: 5),
             
-            gauge.topAnchor.constraint(equalTo: setAddressButton.bottomAnchor, constant: -20)
+            gauge.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
+            gauge.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 120),
+            gauge.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
+            gauge.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
+            gauge.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            
+            minLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40),
+            minLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 40),
+            
+            maxLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40),
+            maxLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -40)
+            
         ])
-        gauge.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 1/4).isActive = true
+        gauge.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 3/4).isActive = true
+        gauge.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 1/5).isActive = true
+        
         setAddressButton.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 1/14).isActive = true
         backgroundView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 7/18).isActive = true
     }
@@ -185,14 +225,30 @@ class MyHomeViewController: UIViewController {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     func downloadImage(from url: URL){
-        print("Download Started")
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
             print(response?.suggestedFilename ?? url.lastPathComponent)
-            print("Download Finished")
             DispatchQueue.main.async() {
                 self.imageView.image = UIImage(data: data)
             }
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        minLabel.text = String(HouseViewController.HomeValues.minValue)
+        maxLabel.text = String(HouseViewController.HomeValues.maxValue)
+        
+        print(HouseViewController.HomeValues.numHomes)
+        if(HouseViewController.HomeValues.numHomes>1){
+            gauge.maxValue = CGFloat(HouseViewController.HomeValues.maxValue-HouseViewController.HomeValues.minValue)
+            let newRate = CGFloat(self.assessedValue-HouseViewController.HomeValues.minValue)
+            print("The new rate is1: \(newRate)")
+            self.gauge.animateRate(0.5, newValue: newRate) { (finished) in
+                print("Gauge animation completed !")
+            }
+        }
+        else{
+            gauge.maxValue = CGFloat(assessedValue)
+            gauge.rate = 0
         }
     }
     
@@ -208,6 +264,8 @@ class MyHomeViewController: UIViewController {
     
 }
 
+
+
 extension MyHomeViewController: UITextFieldDelegate{
     
     
@@ -218,7 +276,7 @@ extension String {
     func capitalizeFirstLetter() -> String {
         return prefix(1).uppercased() + dropFirst()
     }
-
+    
     var upperCamelCase: String {
         return self.lowercased()
             .split(separator: " ")
