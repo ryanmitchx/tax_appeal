@@ -215,9 +215,16 @@ class MyHomeViewController: UIViewController {
     
     
     @objc func handleTouchUpInside(sender: UIButton!) {
+        print("handle touch")
         if sender == setAddressButton{
             keychain["address"] = addressTF.text
-            
+            let addressTest = addressTF.text
+            if(addressTest != nil){
+                print("in if")
+                let addrSplit = addressTest?.split(separator: " ")
+                let zip: String = String(addrSplit?[(addrSplit?.count ?? 8)-1] ?? "null")
+                keychain["zip"] = zip
+            }
         }
     }
     
@@ -246,7 +253,7 @@ class MyHomeViewController: UIViewController {
             maxLabel.isHidden = false
             maxLabel.text = String(HouseViewController.HomeValues.maxValue)
         }
-       
+        
         
         print(HouseViewController.HomeValues.numHomes)
         if(HouseViewController.HomeValues.numHomes>1){

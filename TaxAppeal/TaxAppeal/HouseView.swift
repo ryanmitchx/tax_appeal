@@ -19,13 +19,12 @@ class HouseViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        let userZip = keychain["zip"]
-        PropertyRequest().getSimilarHomes(zip: "90007", bedrooms: 2, bathrooms: 2) { result in
+        let userZip = keychain["zip"] ?? "90007"
+        PropertyRequest().getSimilarHomes(zip: String(userZip) ?? "90007", bedrooms: 2, bathrooms: 2) { result in
           switch result {
             case .failure(let error):
                 print(error)
             case .success(let properties):
-                let myProperty: Property = properties[0]
                 DispatchQueue.main.async{
                     for prop in properties{
                         let newHome: Home = Home(address: "\(prop.situshouseno) \(prop.situsstreet.upperCamelCase)", beds: Int(prop.bedrooms) ?? 0, baths: Int(prop.bathrooms) ?? 0, propertyValue: Int(prop.nettaxablevalue) ?? 0, image: "https://specials-images.forbesimg.com/imageserve/1026205392/960x0.jpg")
