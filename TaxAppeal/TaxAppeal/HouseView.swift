@@ -10,6 +10,15 @@ class HouseViewController: UIViewController {
 //        Home(address: "3131 S Hoover St", beds: 2, baths: 2, propertyValue: 400000, image: "https://specials-images.forbesimg.com/imageserve/1026205392/960x0.jpg"),
 //        Home(address: "Address2", beds: 3, baths: 2, propertyValue: 400000, image: "https://www.whatever.com/png")
     
+    private var houseImages: [String] = [
+        "https://cdn2.lamag.com/wp-content/uploads/sites/6/2018/06/house-los-angeles-getty.jpg",
+"https://cdn.vox-cdn.com/thumbor/mwdkCtzfXICFeiC1UieFdpfNoL0=/0x0:3600x2754/1200x800/filters:focal(1512x1089:2088x1665)/cdn.vox-cdn.com/uploads/chorus_image/image/64920979/395_Detroit_St.25_forprintuse.0.jpg",
+"https://www.thehousedesigners.com/house-plans/images/AdvSearch2-7263.jpg",
+"https://assets.architecturaldesigns.com/plan_assets/324992268/large/23703JD_01_1553616680.jpg?1553616681",
+"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F37%2F2016%2F02%2F15230700%2Ftudor-style-home-exterior-lush-landscaping-628aa053.jpg",
+"https://cdn.houseplansservices.com/content/uilmqifr0uj1is5vkaqhv82hvf/w575.jpg?v=2",
+"https://1900722853.rsc.cdn77.org/data/images/full/98453/building-the-efficient-home-of-the-future-passive-house.jpeg"
+    ]
 
     struct HomeValues{
         static var totalValue: Int = 0
@@ -19,26 +28,8 @@ class HouseViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        let userZip = keychain["zip"] ?? "90007"
-        print(userZip)
-        PropertyRequest().getSimilarHomes(zip: String(userZip) ?? "90007", bedrooms: 2, bathrooms: 2) { result in
-          switch result {
-            case .failure(let error):
-                print(error)
-            case .success(let properties):
-                DispatchQueue.main.async{
-                    for prop in properties{
-                        let newHome: Home = Home(address: "\(prop.situshouseno) \(prop.situsstreet.upperCamelCase)", beds: Int(prop.bedrooms) ?? 0, baths: Int(prop.bathrooms) ?? 0, propertyValue: Int(prop.nettaxablevalue) ?? 0, image: "https://specials-images.forbesimg.com/imageserve/1026205392/960x0.jpg")
-                        self.homes.append(newHome)
-                    }
-                    self.cardStack.delegate = self
-                    self.cardStack.dataSource = self
-                    self.layoutCardStackView()
-                    self.configureBackgroundGradient()
-            }
-                
-            }
-        }
+        view.backgroundColor = .white
+        updateCards()
         
     }
     
@@ -50,6 +41,35 @@ class HouseViewController: UIViewController {
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
+    
+    func updateCards(){
+        HomeValues.totalValue = 0
+        HomeValues.numHomes = 0
+        HomeValues.maxValue = 0
+        HomeValues.minValue = Int.max
+        let userZip = keychain["zip"] ?? "90007"
+        print(userZip)
+        self.homes = []
+        PropertyRequest().getSimilarHomes(zip: String(userZip) ?? "90007", bedrooms: 2, bathrooms: 2) { result in
+          switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let properties):
+                DispatchQueue.main.async{
+                    self.homes = []
+                    for prop in properties{
+                        let newHome: Home = Home(address: "\(prop.situshouseno) \(prop.situsstreet.upperCamelCase)", beds: Int(prop.bedrooms) ?? 0, baths: Int(prop.bathrooms) ?? 0, propertyValue: Int(prop.nettaxablevalue) ?? 0, image: self.houseImages.randomElement() ?? "https://cdn2.lamag.com/wp-content/uploads/sites/6/2018/06/house-los-angeles-getty.jpg")
+                        self.homes.append(newHome)
+                    }
+                    self.cardStack.delegate = self
+                    self.cardStack.dataSource = self
+                    self.layoutCardStackView()
+                    self.configureBackgroundGradient()
+            }
+                
+            }
+        }
+    }
     
     private func layoutCardStackView() {
         view.addSubview(cardStack)
