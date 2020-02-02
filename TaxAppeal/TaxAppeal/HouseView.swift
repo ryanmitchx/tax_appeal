@@ -20,6 +20,7 @@ class HouseViewController: UIViewController {
     
     override func viewDidLoad() {
         let userZip = keychain["zip"] ?? "90007"
+        print(userZip)
         PropertyRequest().getSimilarHomes(zip: String(userZip) ?? "90007", bedrooms: 2, bathrooms: 2) { result in
           switch result {
             case .failure(let error):

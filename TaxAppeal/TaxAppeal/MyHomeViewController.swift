@@ -152,7 +152,6 @@ class MyHomeViewController: UIViewController {
                         self.gauge.rate = 0
                     }
                 }
-                //                address = myProperty.propertylocation.upperCamelCase
             }
         }
         
@@ -195,9 +194,6 @@ class MyHomeViewController: UIViewController {
             
             gauge.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             gauge.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 120),
-            gauge.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
-            gauge.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
-            gauge.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             
             minLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40),
             minLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 40),
@@ -210,7 +206,7 @@ class MyHomeViewController: UIViewController {
         gauge.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 1/5).isActive = true
         
         setAddressButton.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 1/14).isActive = true
-        backgroundView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 7/18).isActive = true
+        backgroundView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 7/18).isActive = true
     }
     
     
