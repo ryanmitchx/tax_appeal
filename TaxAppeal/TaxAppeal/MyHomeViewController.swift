@@ -8,14 +8,18 @@
 
 import UIKit
 import KeychainAccess
+import GaugeKit
 
 class MyHomeViewController: UIViewController {
-
+    
     private var myHomeHeader = UILabel.init()
     private var setAddressButton: UIButton!
     private var addressTF: UITextField!
+    private var infoLabel = UILabel.init()
+    private var addressLabel = UILabel.init()
     private var avgValueLabel = UILabel.init()
     private var keychain: Keychain!
+    private let attributedText = NSMutableAttributedString(string: ("Assessed Value: $"), attributes: NSAttributedString.Key.assessValue)
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -27,7 +31,8 @@ class MyHomeViewController: UIViewController {
         return background
         
     }()
-    
+    private let gauge = Gauge()
+
     private let gradientLayer: CAGradientLayer = {
         let gradient = CAGradientLayer()
         gradient.colors = [UIColor.black.withAlphaComponent(0.8).cgColor,
@@ -53,7 +58,7 @@ class MyHomeViewController: UIViewController {
         myHomeHeader.layer.shadowOpacity = 0.8
         myHomeHeader.layer.shadowOffset = CGSize(width: 2, height: 2)
         myHomeHeader.layer.masksToBounds = false
-//        self.view.addSubvriew(myHomeHeader)
+        //        self.view.addSubvriew(myHomeHeader)
         
         view.backgroundColor = .white
         setAddressButton = UIButton(type: .system)
@@ -91,14 +96,55 @@ class MyHomeViewController: UIViewController {
         view.addSubview(backgroundView)
         backgroundView.anchorToSuperview()
         backgroundView.addSubview(imageView)
-        
         imageView.anchorToSuperview()
-        
+        backgroundView.applyShadow(radius: 8, opacity: 0.2, offset: CGSize(width: 0, height: 2))
         backgroundView.layer.insertSublayer(gradientLayer, above: imageView.layer)
         
-        imageView.addSubview(myHomeHeader)
+        gradientLayer.frame = CGRect(x: 0, y: 0,
+                                     width: view.frame.size.width,
+                                     height: view.frame.size.height * 0.4)
+        
+        view.addSubview(myHomeHeader)
         
         // Do any additional setup after loading the view.
+        infoLabel.translatesAutoresizingMaskIntoConstraints = false
+        infoLabel.numberOfLines = 0
+        
+        addressLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        gauge.type = .right
+        gauge.colorsArray = [UIColor.red, UIColor.orange, UIColor.yellow ,UIColor.green]
+        gauge.rate = 2
+        gauge.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(gauge)
+        
+//        var address: String = "pleasesir"
+        PropertyRequest().getDetailsOfAddress(addressString: "5448%206TH%20AVE%20%20LOS%20ANGELES%20CA%20%2090043"){ result in
+          switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let properties):
+                let myProperty: Property = properties[0]
+                DispatchQueue.main.async{
+                    self.attributedText.append(NSMutableAttributedString(string: "\(myProperty.nettaxablevalue).00", attributes: NSAttributedString.Key.assessValue))
+                    let paragraphStyle = NSMutableParagraphStyle()
+                    paragraphStyle.lineSpacing = 1.5
+                    paragraphStyle.lineBreakMode = .byTruncatingTail
+                    self.attributedText.addAttributes([NSAttributedString.Key.paragraphStyle: paragraphStyle], range: NSRange(location: 0, length: self.attributedText.length))
+                    self.attributedText.append(NSMutableAttributedString(string: "\n\(myProperty.bedrooms) bedrooms, \(myProperty.bathrooms) bathrooms", attributes: NSAttributedString.Key.assessValue))
+                    let attribAddr = NSMutableAttributedString(string: "\(myProperty.situshouseno) \(myProperty.situsstreet.upperCamelCase), \(myProperty.taxratearea_city.upperCamelCase), CA \(myProperty.situszip5)", attributes: NSAttributedString.Key.addr)
+                    self.addressLabel.attributedText = attribAddr
+                    self.infoLabel.attributedText = self.attributedText
+                }
+//                address = myProperty.propertylocation.upperCamelCase
+            }
+        }
+        
+        view.addSubview(addressLabel)
+        infoLabel.attributedText = attributedText
+        
+        view.addSubview(infoLabel)
         constraintsInit()
         
     }
@@ -110,22 +156,28 @@ class MyHomeViewController: UIViewController {
             setAddressButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             setAddressButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             
-            addressTF.topAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: 50),
+            addressTF.topAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: 150),
             addressTF.leadingAnchor.constraint(equalTo: view.readableContentGuide.leadingAnchor, constant: 20),
             addressTF.trailingAnchor.constraint(equalTo: view.readableContentGuide.trailingAnchor, constant: -20),
+
+            infoLabel.topAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: 20),
+            infoLabel.leadingAnchor.constraint(equalTo: view.readableContentGuide.leadingAnchor, constant: 15),
             
-//            backgroundView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            addressLabel.bottomAnchor.constraint(equalTo: backgroundView.bottomAnchor, constant: -10),
+            addressLabel.leadingAnchor.constraint(equalTo: view.readableContentGuide.leadingAnchor, constant: 5),
+            
+            gauge.topAnchor.constraint(equalTo: setAddressButton.bottomAnchor, constant: -20)
         ])
-        
+        gauge.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 1/4).isActive = true
         setAddressButton.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 1/14).isActive = true
-        backgroundView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 4/9).isActive = true
+        backgroundView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 7/18).isActive = true
     }
     
-
+    
     @objc func handleTouchUpInside(sender: UIButton!) {
         if sender == setAddressButton{
-            keychain["zip"] = addressTF.text
-
+            keychain["address"] = addressTF.text
+            
         }
     }
     
@@ -145,18 +197,51 @@ class MyHomeViewController: UIViewController {
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension MyHomeViewController: UITextFieldDelegate{
     
+    
+}
+
+extension String {
+    
+    func capitalizeFirstLetter() -> String {
+        return prefix(1).uppercased() + dropFirst()
+    }
+
+    var upperCamelCase: String {
+        return self.lowercased()
+            .split(separator: " ")
+            .map { return $0.lowercased().capitalizeFirstLetter() }
+            .joined(separator: " ")
+    }
+    
+    var lowerCamelCase: String {
+        let upperCased = self.upperCamelCase
+        return upperCased.prefix(1).lowercased() + upperCased.dropFirst()
+    }
+}
+
+extension NSAttributedString.Key {
+    
+    static var assessValue: [NSAttributedString.Key: Any] = [
+        NSAttributedString.Key.font: UIFont(name: "Avenir-Light", size: 18)!,
+        NSAttributedString.Key.foregroundColor: UIColor.black,
+    ]
+    
+    static var addr: [NSAttributedString.Key: Any] = [
+        NSAttributedString.Key.font: UIFont(name: "Avenir-Light", size: 16)!,
+        NSAttributedString.Key.foregroundColor: UIColor.white,
+    ]
     
 }

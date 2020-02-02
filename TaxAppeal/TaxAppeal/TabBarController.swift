@@ -40,7 +40,6 @@ class TabBarController: UITabBarController {
         settings.tabBarItem.image = UIImage(systemName: "gear")
         let tbc = CBFlashyTabBarController()
         tbc.viewControllers = [neighborhood, myHome, settings]
-        print("hello")
         tbc.modalPresentationStyle = .fullScreen
         self.present(tbc, animated: false, completion: nil)
     }

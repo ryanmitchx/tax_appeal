@@ -26,19 +26,18 @@ class SampleCardFooterView: UIView {
             attributedText.append(NSMutableAttributedString(string: "Assessed value: $\(assessedValue)", attributes: NSAttributedString.Key.assessedValueAttributes))
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.lineSpacing = 2
-            paragraphStyle.lineBreakMode = .byTruncatingTail
+//            paragraphStyle.lineBreakMode = .byTruncatingTail
             attributedText.addAttributes([NSAttributedString.Key.paragraphStyle: paragraphStyle], range: NSRange(location: 0, length: attributedText.length))
-            label.numberOfLines = 3
         }
         if let subtitle = subtitle, subtitle != "" {
             attributedText.append(NSMutableAttributedString(string: "\n\(subtitle)", attributes: NSAttributedString.Key.subtitleAttributes))
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.lineSpacing = 2
-            paragraphStyle.lineBreakMode = .byTruncatingTail
+//            paragraphStyle.lineBreakMode = .byTruncatingTail
             attributedText.addAttributes([NSAttributedString.Key.paragraphStyle: paragraphStyle], range: NSRange(location: 0, length: attributedText.length))
-            label.numberOfLines = 3
+            
         }
-        
+        label.numberOfLines = 100
         label.attributedText = attributedText
         addSubview(label)
     }

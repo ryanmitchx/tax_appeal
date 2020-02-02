@@ -8,8 +8,8 @@ target 'TaxAppeal' do
   # Pods for TaxAppeal
   pod 'CBFlashyTabBarController'
   pod 'Shuffle-iOS'
-  pod 'SDWebImage/Core'
   pod 'KeychainAccess'
+  pod 'GaugeKit'
   target 'TaxAppealTests' do
     inherit! :search_paths
     # Pods for testing

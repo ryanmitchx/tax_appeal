@@ -6,42 +6,41 @@ class HouseViewController: UIViewController {
     private let cardStack = SwipeCardStack()
     private let keychain = Keychain(service: "com.brs.TaxAppeal")
     
-    private let homes = [
-        Home(address: "3131 S Hoover St", beds: 2, baths: 2, propertyValue: 400000, image: "https://specials-images.forbesimg.com/imageserve/1026205392/960x0.jpg"),
-        Home(address: "Address2", beds: 3, baths: 2, propertyValue: 400000, image: "https://www.whatever.com/png")
-    ]
+    private var homes: [Home] = []
+//        Home(address: "3131 S Hoover St", beds: 2, baths: 2, propertyValue: 400000, image: "https://specials-images.forbesimg.com/imageserve/1026205392/960x0.jpg"),
+//        Home(address: "Address2", beds: 3, baths: 2, propertyValue: 400000, image: "https://www.whatever.com/png")
+    
 
     struct HomeValues{
         static var totalValue: Int = 400000
         static var numHomes: Int = 2
+        static var maxValue: Int = 0
+        static var minValue: Int = Int.max
     }
     
     override func viewDidLoad() {
         let userZip = keychain["zip"]
-        PropertyRequest().getDetails(zip: userZip ?? "90007") { result in
+        PropertyRequest().getSimilarHomes(zip: "90007", bedrooms: 2, bathrooms: 2) { result in
           switch result {
             case .failure(let error):
                 print(error)
             case .success(let properties):
                 let myProperty: Property = properties[0]
-                PropertyRequest().getProperties(myHouse: myProperty) { result in
-                    switch result {
-                      case .failure(let error):
-                          print(error)
-                      case .success(let properties):
-                        for prop in properties {
-                            print(prop.bathrooms + " " + prop.bedrooms)
-                        }
+                DispatchQueue.main.async{
+                    for prop in properties{
+                        print(prop)
+                        let newHome: Home = Home(address: "\(prop.situshouseno) \(prop.situsstreet.upperCamelCase)", beds: Int(prop.bedrooms) ?? 0, baths: Int(prop.bathrooms) ?? 0, propertyValue: Int(prop.nettaxablevalue) ?? 0, image: "https://specials-images.forbesimg.com/imageserve/1026205392/960x0.jpg")
+                        self.homes.append(newHome)
                     }
-                }
+                    self.cardStack.delegate = self
+                    self.cardStack.dataSource = self
+                    self.layoutCardStackView()
+                    self.configureBackgroundGradient()
+            }
+                
             }
         }
         
-        cardStack.delegate = self
-        cardStack.dataSource = self
-//        configureNavigationBar()
-        layoutCardStackView()
-        configureBackgroundGradient()
     }
     
     private func configureBackgroundGradient() {
@@ -91,6 +90,12 @@ extension HouseViewController: SwipeCardStackDataSource, SwipeCardStackDelegate 
         if(direction == .right){
             HomeValues.totalValue += homes[index].propertyValue
             HomeValues.numHomes += 1
+            if homes[index].propertyValue > HomeValues.maxValue {
+                HomeValues.maxValue = homes[index].propertyValue
+            }
+            if homes[index].propertyValue < HomeValues.minValue {
+                HomeValues.minValue = homes[index].propertyValue
+            }
         }
         print(HomeValues.totalValue)
     }

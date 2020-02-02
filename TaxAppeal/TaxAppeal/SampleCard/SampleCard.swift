@@ -1,5 +1,4 @@
 import Shuffle_iOS
-import SDWebImage
 
 class HomeCard: SwipeCard {
     
@@ -9,7 +8,7 @@ class HomeCard: SwipeCard {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        footerHeight = 140
+        footerHeight = 250
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,11 +36,8 @@ class HomeCard: SwipeCard {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     func downloadImage(from url: URL) {
-        print("Download Started")
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url.lastPathComponent)
-            print("Download Finished")
             DispatchQueue.main.async() {
                 self.content = SampleCardContentView(withImage: UIImage(data: data))
             }

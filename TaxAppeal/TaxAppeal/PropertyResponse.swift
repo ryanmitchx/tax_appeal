@@ -15,7 +15,6 @@ struct PropertyResponse: Decodable {
         var properties = [Property]()
         var container = try decoder.unkeyedContainer()
         while !container.isAtEnd {
-            //print("hello")
             if let house = try? container.decode(Property.self) {
                 properties.append(house)
             }else {
@@ -37,8 +36,9 @@ struct Property: Decodable {
     var situsstreet: String
     var situshouseno: String
     var usecodedescchar1: String
-    var usecodedescchar2: String
-    var usecodedescchar3: String
+    var taxratearea_city: String
+//    var usecodedescchar2: String
+//    var usecodedescchar3: String
 }
 
 enum PropertyError: Error {

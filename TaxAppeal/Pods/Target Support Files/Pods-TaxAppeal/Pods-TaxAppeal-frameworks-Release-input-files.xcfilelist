@@ -1,5 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-TaxAppeal/Pods-TaxAppeal-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/CBFlashyTabBarController/CBFlashyTabBarController.framework
+${BUILT_PRODUCTS_DIR}/GaugeKit/GaugeKit.framework
 ${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework
-${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
 ${BUILT_PRODUCTS_DIR}/Shuffle-iOS/Shuffle_iOS.framework
