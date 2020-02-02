@@ -234,8 +234,19 @@ class MyHomeViewController: UIViewController {
         }
     }
     override func viewWillAppear(_ animated: Bool) {
-        minLabel.text = String(HouseViewController.HomeValues.minValue)
-        maxLabel.text = String(HouseViewController.HomeValues.maxValue)
+        if(HouseViewController.HomeValues.minValue == Int.max){
+            minLabel.isHidden = true
+        }else{
+            minLabel.isHidden = false
+            minLabel.text = String(HouseViewController.HomeValues.minValue)
+        }
+        if(HouseViewController.HomeValues.maxValue == 0){
+            maxLabel.isHidden = true
+        }else{
+            maxLabel.isHidden = false
+            maxLabel.text = String(HouseViewController.HomeValues.maxValue)
+        }
+       
         
         print(HouseViewController.HomeValues.numHomes)
         if(HouseViewController.HomeValues.numHomes>1){
